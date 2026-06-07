@@ -284,23 +284,32 @@
       <div class="relative aspect-video bg-black rounded-xl overflow-hidden border border-gray-800/60 shadow-2xl hover:border-amber-500/40 transition-all duration-500" style="box-shadow: 0 30px 80px -20px rgba(0,0,0,0.9), 0 0 60px -15px rgba(223, 84, 44, 0.15);">
         
         <!-- Letterbox bars -->
-        <div class="absolute top-0 left-0 right-0 h-4 md:h-6 bg-black z-10"></div>
-        <div class="absolute bottom-0 left-0 right-0 h-4 md:h-6 bg-black z-10"></div>
+        <div class="absolute top-0 left-0 right-0 h-4 md:h-6 bg-black z-30 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 right-0 h-4 md:h-6 bg-black z-30 pointer-events-none"></div>
 
-        <!-- YouTube Embed -->
+        <!-- Custom Thumbnail Overlay -->
+        <div class="absolute inset-0 z-20 cursor-pointer custom-video-overlay flex items-center justify-center" data-video-id="mEqLDZPqWVk">
+          <div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" style="background-image: url('https://img.youtube.com/vi/mEqLDZPqWVk/maxresdefault.jpg');"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-navy/80 mix-blend-multiply group-hover:opacity-80 transition-opacity duration-500"></div>
+          
+          <div class="relative z-30 w-20 h-20 rounded-full bg-burntOrange/80 text-white flex items-center justify-center backdrop-blur-md shadow-[0_0_40px_rgba(223,84,44,0.6)] group-hover:scale-110 group-hover:bg-burntOrange transition-all duration-300 border border-white/20">
+             <svg class="w-10 h-10 ml-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+
+        <!-- YouTube Embed (Src populated on click) -->
         <iframe 
-          class="w-full h-full" 
-          src="https://www.youtube.com/embed/mEqLDZPqWVk" 
+          class="w-full h-full relative z-10" 
+          data-src="https://www.youtube.com/embed/mEqLDZPqWVk?autoplay=1&rel=0" 
           title="MC Quốc Khánh — Video Chính" 
           frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen
-          loading="lazy">
+          allowfullscreen>
         </iframe>
       </div>
 
       <!-- Featured badge -->
-      <div class="absolute -top-3 left-6 md:left-8 z-20">
+      <div class="absolute -top-3 left-6 md:left-8 z-40">
         <span class="bg-burntOrange text-white text-[9px] font-condensed tracking-[0.25em] uppercase px-4 py-1.5 rounded-sm shadow-lg" style="box-shadow: 0 4px 20px rgba(223, 84, 44, 0.5);">
           ★ CLIP NỔI BẬT
         </span>
@@ -308,102 +317,159 @@
     </div>
 
     <!-- Secondary Videos Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8" id="showreel-grid">
 
       <!-- Video Card 1 -->
-      <div class="video-card-wrapper group">
+      <div class="video-card-wrapper group showreel-item">
         <div class="relative aspect-video bg-black rounded-lg overflow-hidden border border-gray-800/50 shadow-xl transition-all duration-500 hover:border-amber-500/40 hover:shadow-[0_20px_50px_-15px_rgba(242,153,26,0.2)]">
-          <iframe 
-            class="w-full h-full" 
-            src="https://www.youtube.com/embed/gjb1ac5lJ9Q" 
-            title="MC Quốc Khánh — Clip 1" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+          <div class="absolute inset-0 z-20 cursor-pointer custom-video-overlay flex items-center justify-center" data-video-id="gjb1ac5lJ9Q">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://img.youtube.com/vi/gjb1ac5lJ9Q/maxresdefault.jpg');"></div>
+            <div class="absolute inset-0 bg-navy/70 group-hover:bg-navy/40 transition-colors duration-500 mix-blend-multiply"></div>
+            <div class="relative z-30 w-14 h-14 rounded-full bg-white/10 text-white flex items-center justify-center backdrop-blur-sm border border-white/30 group-hover:bg-burntOrange group-hover:border-burntOrange transition-all duration-300">
+               <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <iframe class="w-full h-full relative z-10" data-src="https://www.youtube.com/embed/gjb1ac5lJ9Q?autoplay=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
 
       <!-- Video Card 2 -->
-      <div class="video-card-wrapper group">
+      <div class="video-card-wrapper group showreel-item">
         <div class="relative aspect-video bg-black rounded-lg overflow-hidden border border-gray-800/50 shadow-xl transition-all duration-500 hover:border-amber-500/40 hover:shadow-[0_20px_50px_-15px_rgba(242,153,26,0.2)]">
-          <iframe 
-            class="w-full h-full" 
-            src="https://www.youtube.com/embed/iDa3ifCrknc" 
-            title="MC Quốc Khánh — Clip 2" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+          <div class="absolute inset-0 z-20 cursor-pointer custom-video-overlay flex items-center justify-center" data-video-id="iDa3ifCrknc">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://img.youtube.com/vi/iDa3ifCrknc/maxresdefault.jpg');"></div>
+            <div class="absolute inset-0 bg-navy/70 group-hover:bg-navy/40 transition-colors duration-500 mix-blend-multiply"></div>
+            <div class="relative z-30 w-14 h-14 rounded-full bg-white/10 text-white flex items-center justify-center backdrop-blur-sm border border-white/30 group-hover:bg-burntOrange group-hover:border-burntOrange transition-all duration-300">
+               <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <iframe class="w-full h-full relative z-10" data-src="https://www.youtube.com/embed/iDa3ifCrknc?autoplay=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
 
       <!-- Video Card 3 -->
-      <div class="video-card-wrapper group">
+      <div class="video-card-wrapper group showreel-item">
         <div class="relative aspect-video bg-black rounded-lg overflow-hidden border border-gray-800/50 shadow-xl transition-all duration-500 hover:border-amber-500/40 hover:shadow-[0_20px_50px_-15px_rgba(242,153,26,0.2)]">
-          <iframe 
-            class="w-full h-full" 
-            src="https://www.youtube.com/embed/Nmb03L5ZVZI" 
-            title="MC Quốc Khánh — Clip 3" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+          <div class="absolute inset-0 z-20 cursor-pointer custom-video-overlay flex items-center justify-center" data-video-id="Nmb03L5ZVZI">
+            <!-- Using hqdefault as fallback if maxresdefault doesn't exist for some older videos -->
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://img.youtube.com/vi/Nmb03L5ZVZI/maxresdefault.jpg'), url('https://img.youtube.com/vi/Nmb03L5ZVZI/hqdefault.jpg');"></div>
+            <div class="absolute inset-0 bg-navy/70 group-hover:bg-navy/40 transition-colors duration-500 mix-blend-multiply"></div>
+            <div class="relative z-30 w-14 h-14 rounded-full bg-white/10 text-white flex items-center justify-center backdrop-blur-sm border border-white/30 group-hover:bg-burntOrange group-hover:border-burntOrange transition-all duration-300">
+               <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <iframe class="w-full h-full relative z-10" data-src="https://www.youtube.com/embed/Nmb03L5ZVZI?autoplay=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
 
       <!-- Video Card 4 -->
-      <div class="video-card-wrapper group">
+      <div class="video-card-wrapper group showreel-item hidden">
         <div class="relative aspect-video bg-black rounded-lg overflow-hidden border border-gray-800/50 shadow-xl transition-all duration-500 hover:border-amber-500/40 hover:shadow-[0_20px_50px_-15px_rgba(242,153,26,0.2)]">
-          <iframe 
-            class="w-full h-full" 
-            src="https://www.youtube.com/embed/OpMSgCVe0tw" 
-            title="MC Quốc Khánh — Clip 4" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+          <div class="absolute inset-0 z-20 cursor-pointer custom-video-overlay flex items-center justify-center" data-video-id="OpMSgCVe0tw">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://img.youtube.com/vi/OpMSgCVe0tw/maxresdefault.jpg'), url('https://img.youtube.com/vi/OpMSgCVe0tw/hqdefault.jpg');"></div>
+            <div class="absolute inset-0 bg-navy/70 group-hover:bg-navy/40 transition-colors duration-500 mix-blend-multiply"></div>
+            <div class="relative z-30 w-14 h-14 rounded-full bg-white/10 text-white flex items-center justify-center backdrop-blur-sm border border-white/30 group-hover:bg-burntOrange group-hover:border-burntOrange transition-all duration-300">
+               <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <iframe class="w-full h-full relative z-10" data-src="https://www.youtube.com/embed/OpMSgCVe0tw?autoplay=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
 
       <!-- Video Card 5 -->
-      <div class="video-card-wrapper group">
+      <div class="video-card-wrapper group showreel-item hidden">
         <div class="relative aspect-video bg-black rounded-lg overflow-hidden border border-gray-800/50 shadow-xl transition-all duration-500 hover:border-amber-500/40 hover:shadow-[0_20px_50px_-15px_rgba(242,153,26,0.2)]">
-          <iframe 
-            class="w-full h-full" 
-            src="https://www.youtube.com/embed/90P6Qbsazn8" 
-            title="MC Quốc Khánh — Clip 5" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+          <div class="absolute inset-0 z-20 cursor-pointer custom-video-overlay flex items-center justify-center" data-video-id="90P6Qbsazn8">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://img.youtube.com/vi/90P6Qbsazn8/maxresdefault.jpg'), url('https://img.youtube.com/vi/90P6Qbsazn8/hqdefault.jpg');"></div>
+            <div class="absolute inset-0 bg-navy/70 group-hover:bg-navy/40 transition-colors duration-500 mix-blend-multiply"></div>
+            <div class="relative z-30 w-14 h-14 rounded-full bg-white/10 text-white flex items-center justify-center backdrop-blur-sm border border-white/30 group-hover:bg-burntOrange group-hover:border-burntOrange transition-all duration-300">
+               <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <iframe class="w-full h-full relative z-10" data-src="https://www.youtube.com/embed/90P6Qbsazn8?autoplay=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
 
       <!-- Video Card 6 -->
-      <div class="video-card-wrapper group">
+      <div class="video-card-wrapper group showreel-item hidden">
         <div class="relative aspect-video bg-black rounded-lg overflow-hidden border border-gray-800/50 shadow-xl transition-all duration-500 hover:border-amber-500/40 hover:shadow-[0_20px_50px_-15px_rgba(242,153,26,0.2)]">
-          <iframe 
-            class="w-full h-full" 
-            src="https://www.youtube.com/embed/sQ55F0IpSec" 
-            title="MC Quốc Khánh — Clip 6" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+          <div class="absolute inset-0 z-20 cursor-pointer custom-video-overlay flex items-center justify-center" data-video-id="sQ55F0IpSec">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://img.youtube.com/vi/sQ55F0IpSec/maxresdefault.jpg'), url('https://img.youtube.com/vi/sQ55F0IpSec/hqdefault.jpg');"></div>
+            <div class="absolute inset-0 bg-navy/70 group-hover:bg-navy/40 transition-colors duration-500 mix-blend-multiply"></div>
+            <div class="relative z-30 w-14 h-14 rounded-full bg-white/10 text-white flex items-center justify-center backdrop-blur-sm border border-white/30 group-hover:bg-burntOrange group-hover:border-burntOrange transition-all duration-300">
+               <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <iframe class="w-full h-full relative z-10" data-src="https://www.youtube.com/embed/sQ55F0IpSec?autoplay=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
 
     </div>
 
+    <!-- View More Button -->
+    <div class="text-center mt-10" id="showreel-load-more-container">
+      <button id="showreel-load-more-btn" class="group relative inline-flex items-center justify-center px-8 py-3.5 text-sm font-bold text-white tracking-[0.2em] uppercase transition-all duration-300 bg-transparent border border-gray-700 rounded-full hover:border-burntOrange hover:bg-burntOrange/10 overflow-hidden">
+        <span class="relative z-10 flex items-center">
+          XEM THÊM VIDEO
+          <svg class="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </span>
+      </button>
+    </div>
+
   </div>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Handle Video Overlay Clicks
+    const overlays = document.querySelectorAll('.custom-video-overlay');
+    overlays.forEach(overlay => {
+      overlay.addEventListener('click', function() {
+        const iframe = this.nextElementSibling;
+        const src = iframe.getAttribute('data-src');
+        if (src) {
+          iframe.setAttribute('src', src);
+          // Fade out the overlay
+          this.style.opacity = '0';
+          setTimeout(() => {
+            this.style.display = 'none';
+          }, 500);
+        }
+      });
+    });
+
+    // 2. Handle View More Button
+    const loadMoreBtn = document.getElementById('showreel-load-more-btn');
+    const loadMoreContainer = document.getElementById('showreel-load-more-container');
+    const hiddenItems = document.querySelectorAll('.showreel-item.hidden');
+    
+    if (hiddenItems.length === 0 && loadMoreContainer) {
+      loadMoreContainer.style.display = 'none';
+    }
+
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', () => {
+        // Show all hidden items with a fade-in effect
+        hiddenItems.forEach((item, index) => {
+          item.classList.remove('hidden');
+          item.style.opacity = '0';
+          item.style.transform = 'translateY(20px)';
+          
+          setTimeout(() => {
+            item.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
+          }, index * 100); // Stagger effect
+        });
+        
+        // Hide the button container after expanding
+        if (loadMoreContainer) {
+          loadMoreContainer.style.display = 'none';
+        }
+      });
+    }
+  });
+</script>
 <!-- --- END OF FILE: 01-03-trailer-experience.html --- -->
 
 <!-- --- START OF FILE: 02-00-divider.html --- -->
