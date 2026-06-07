@@ -69,8 +69,7 @@
       const categoryVietnamese = categoryMap[album.category] || album.category.toUpperCase();
 
       const card = document.createElement('div');
-      card.className = 'gallery-card opacity-0';
-      card.style.transform = 'translateY(30px)';
+      card.className = 'gallery-card';
       card.setAttribute('data-index', IMAGES_DATA.indexOf(album));
       
       card.innerHTML = `
@@ -99,17 +98,17 @@
       galleryGrid.appendChild(card);
       
       if (typeof gsap !== 'undefined') {
-        gsap.to(card, {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          delay: (index % 4) * 0.1,
-          ease: 'power2.out',
-          clearProps: 'transform'
-        });
-      } else {
-        card.style.opacity = '1';
-        card.style.transform = 'none';
+        gsap.fromTo(card, 
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            delay: (index % 4) * 0.1,
+            ease: 'power2.out',
+            clearProps: 'transform'
+          }
+        );
       }
     });
     
@@ -181,8 +180,7 @@
       }
       
       const card = document.createElement('div');
-      card.className = 'gallery-card opacity-0 flex-shrink-0 w-[280px] md:w-[340px] snap-start';
-      card.style.transform = 'translateY(30px)';
+      card.className = 'gallery-card flex-shrink-0 w-[280px] md:w-[340px] snap-start';
       card.setAttribute('data-index', IMAGES_DATA.indexOf(album));
       
       card.innerHTML = `
@@ -213,17 +211,17 @@
       realEstateGrid.appendChild(card);
       
       if (typeof gsap !== 'undefined') {
-        gsap.to(card, {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          delay: (index % 4) * 0.1,
-          ease: 'power2.out',
-          clearProps: 'transform'
-        });
-      } else {
-        card.style.opacity = '1';
-        card.style.transform = 'none';
+        gsap.fromTo(card,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            delay: (index % 4) * 0.1,
+            ease: 'power2.out',
+            clearProps: 'transform'
+          }
+        );
       }
     });
   }
@@ -338,8 +336,7 @@
       const numPhotos = album.images ? album.images.length : 0;
       
       const card = document.createElement('div');
-      card.className = 'gallery-card opacity-0 flex-shrink-0 w-[280px] md:w-[340px] snap-start';
-      card.style.transform = 'translateY(30px)';
+      card.className = 'gallery-card flex-shrink-0 w-[280px] md:w-[340px] snap-start';
       card.setAttribute('data-index', IMAGES_DATA.indexOf(album));
       
       card.innerHTML = `
@@ -370,17 +367,17 @@
       sportsArchiveGrid.appendChild(card);
       
       if (typeof gsap !== 'undefined') {
-        gsap.to(card, {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          delay: (index % 4) * 0.1,
-          ease: 'power2.out',
-          clearProps: 'transform'
-        });
-      } else {
-        card.style.opacity = '1';
-        card.style.transform = 'none';
+        gsap.fromTo(card,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            delay: (index % 4) * 0.1,
+            ease: 'power2.out',
+            clearProps: 'transform'
+          }
+        );
       }
     });
   }
