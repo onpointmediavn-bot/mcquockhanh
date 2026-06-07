@@ -12,12 +12,12 @@ CONFIGS = [
     },
     {
         "srcDir": os.path.join(ROOT_DIR, "assets", "css"),
-        "outputFile": os.path.join(ROOT_DIR, "assets", "css", "style.css"),
+        "outputFile": os.path.join(ROOT_DIR, "assets", "css", "style-v2.css"),
         "ext": ".css"
     },
     {
         "srcDir": os.path.join(ROOT_DIR, "assets", "js"),
-        "outputFile": os.path.join(ROOT_DIR, "assets", "js", "main.js"),
+        "outputFile": os.path.join(ROOT_DIR, "assets", "js", "main-v2.js"),
         "ext": ".js"
     }
 ]
