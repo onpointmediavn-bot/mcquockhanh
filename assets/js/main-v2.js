@@ -51,26 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* --- END OF FILE: 02-projector.js --- */
 
-/* --- START OF FILE: 03-marquee.js --- */
-// ==========================================
-// ==========================================
-  // PARTNERS LOGO MARQUEE (DYNAMIC POPULATE)
-// ==========================================
-  const marqueeContainer = document.getElementById('partners-marquee');
-  if (marqueeContainer && typeof PARTNER_LOGOS !== 'undefined') {
-    // Triple the logo list to guarantee a seamless wrap on wide screens
-    const tripleLogos = [...PARTNER_LOGOS, ...PARTNER_LOGOS, ...PARTNER_LOGOS];
-    tripleLogos.forEach(logoPath => {
-      const img = document.createElement('img');
-      img.src = logoPath;
-      img.alt = 'Partner Logo';
-      marqueeContainer.appendChild(img);
-    });
-  }
-
-/* --- END OF FILE: 03-marquee.js --- */
-
-/* --- START OF FILE: 03.5-images_data.js --- */
+/* --- START OF FILE: 02.5-images_data.js --- */
 // Auto-generated file containing image resources from local directory
 const SHOWREEL_URL = "https://www.youtube.com/embed/coYw-Nirh_U?autoplay=1&mute=0";
 
@@ -563,7 +544,26 @@ const PARTNER_LOGOS = [
   "assets/images/don_vi_tung_cong_tac/viettime.png"
 ];
 
-/* --- END OF FILE: 03.5-images_data.js --- */
+/* --- END OF FILE: 02.5-images_data.js --- */
+
+/* --- START OF FILE: 03-marquee.js --- */
+// ==========================================
+// ==========================================
+  // PARTNERS LOGO MARQUEE (DYNAMIC POPULATE)
+// ==========================================
+  const marqueeContainer = document.getElementById('partners-marquee');
+  if (marqueeContainer && typeof PARTNER_LOGOS !== 'undefined') {
+    // Triple the logo list to guarantee a seamless wrap on wide screens
+    const tripleLogos = [...PARTNER_LOGOS, ...PARTNER_LOGOS, ...PARTNER_LOGOS];
+    tripleLogos.forEach(logoPath => {
+      const img = document.createElement('img');
+      img.src = logoPath;
+      img.alt = 'Partner Logo';
+      marqueeContainer.appendChild(img);
+    });
+  }
+
+/* --- END OF FILE: 03-marquee.js --- */
 
 /* --- START OF FILE: 04-gallery.js --- */
 // ==========================================
