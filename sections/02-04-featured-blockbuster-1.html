@@ -1,0 +1,84 @@
+<!-- ==========================================
+     SECTION 04 — FEATURED BLOCKBUSTER 1
+     ========================================== -->
+<section class="poster-container bg-navy border-t border-gray-900/80" id="blockbuster-1">
+  <div class="poster-bg opacity-15" style="background-image: url('assets/images/Anh_Sun_Festo_Town/QT_0490.jpg');"></div>
+  <div class="poster-overlay-gradient"></div>
+
+  <div class="poster-content max-w-7xl mx-auto px-4 relative z-10">
+    <div class="text-center mb-8">
+      <div class="flex justify-between items-center text-billing-credit max-w-4xl mx-auto mb-4">
+        <div>MC QUỐC KHÁNH</div>
+        <div class="text-burntOrange font-semibold">RA MẮT ẤN TƯỢNG</div>
+      </div>
+      <h2 class="text-3xl md:text-5xl text-cinematic-title text-white tracking-wide glow-text-orange leading-tight max-w-4xl mx-auto uppercase">
+        Giới thiệu Phân khu Sun Festo Town dự án Sun Elite City
+      </h2>
+    </div>
+
+    <!-- Layout 5: Overlapping Film Strip Row -->
+    <div class="filmstrip-row max-w-6xl mx-auto flex flex-wrap gap-4">
+      
+      <!-- Slide 1 -->
+      <div class="filmstrip-cell w-full md:w-[calc(25%-1rem)]">
+        <div class="relative aspect-[4/3] overflow-hidden rounded-lg border border-gray-800/85 group shadow-[0_15px_35px_rgba(0,0,0,0.8)] cursor-pointer" onclick="openFestoLightbox('QT_0490.jpg')">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Anh_Sun_Festo_Town/QT_0490.jpg');"></div>
+                  </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="filmstrip-cell w-full md:w-[calc(25%-1rem)]">
+        <div class="relative aspect-[4/3] overflow-hidden rounded-lg border border-gray-800/85 group shadow-[0_15px_35px_rgba(0,0,0,0.8)] cursor-pointer" onclick="openFestoLightbox('QT_0514.jpg')">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Anh_Sun_Festo_Town/QT_0514.jpg');"></div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="filmstrip-cell w-full md:w-[calc(25%-1rem)]">
+        <div class="relative aspect-[4/3] overflow-hidden rounded-lg border border-gray-800/85 group shadow-[0_15px_35px_rgba(0,0,0,0.8)] cursor-pointer" onclick="openFestoLightbox('QT_0474.jpg')">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Anh_Sun_Festo_Town/QT_0474.jpg');"></div>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="filmstrip-cell w-full md:w-[calc(25%-1rem)]">
+        <div class="relative aspect-[4/3] overflow-hidden rounded-lg border border-gray-800/85 group shadow-[0_15px_35px_rgba(0,0,0,0.8)] cursor-pointer" onclick="openFestoLightbox('QT_0171.jpg')">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Anh_Sun_Festo_Town/QT_0171.jpg');"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Remaining 3 secondary images at the bottom -->
+    <div class="grid grid-cols-3 gap-4 max-w-4xl mx-auto mt-12 pt-6 border-t border-gray-900/40">
+      <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openFestoLightbox('QT_0259.jpg')">
+        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Anh_Sun_Festo_Town/QT_0259.jpg');"></div>
+      </div>
+      <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openFestoLightbox('QT_0153.jpg')">
+        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Anh_Sun_Festo_Town/QT_0153.jpg');"></div>
+      </div>
+      <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openFestoLightbox('QT_0360.jpg')">
+        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Anh_Sun_Festo_Town/QT_0360.jpg');"></div>
+      </div>
+    </div>
+
+    <div class="billing-block-container !justify-center !mx-auto mt-12">
+      <div class="text-billing-credit">MC DẪN CHƯƠNG TRÌNH <span class="text-billing-bold">QUỐC KHÁNH</span></div>
+      <div class="text-billing-credit">ĐƠN VỊ <span class="text-billing-bold">SUN GROUP</span></div>
+      <div class="text-billing-credit">VAI TRÒ <span class="text-billing-bold">MC DẪN DẮT LỄ RA MẮT DỰ ÁN</span></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function openFestoLightbox(imgName) {
+    if (typeof openLightbox === 'function' && typeof IMAGES_DATA !== 'undefined') {
+      const albumIdx = IMAGES_DATA.findIndex(a => a.folderName === 'Anh_Sun_Festo_Town');
+      if (albumIdx !== -1) {
+        const imagesList = getSectionImages('blockbuster-1');
+        const imgIdx = imagesList.findIndex(img => img.includes(imgName));
+        openLightbox(albumIdx, imgIdx !== -1 ? imgIdx : 0, imagesList);
+      }
+    }
+  }
+</script>

@@ -1,0 +1,70 @@
+<!-- ==========================================
+         SECTION 04 — FEATURED BLOCKBUSTER 2
+         ========================================== -->
+    <section class="poster-container bg-indigo/20" id="blockbuster-2">
+      <div class="poster-bg opacity-25" style="background-image: url('assets/images/DIC_Victory_Can_Tho/MGH00598.jpg');"></div>
+      <div class="poster-overlay-gradient"></div>
+ 
+      <div class="poster-content">
+        <div class="max-w-4xl mx-auto space-y-6">
+          <div class="flex justify-between items-center text-billing-credit">
+            <div>MC QUỐC KHÁNH</div>
+            <div class="text-amber-500 font-semibold">RA MẮT ẤN TƯỢNG</div>
+          </div>
+          
+          <h2 class="text-3xl md:text-5xl text-cinematic-title text-white tracking-wide glow-text-amber leading-tight">
+            Giới thiệu dự án DIC Victory Cần Thơ
+          </h2>
+        </div>
+
+        <!-- Event Gallery Grid (Asymmetric Mirrored Editorial Layout) -->
+        <div class="space-y-4 mt-12 pt-8 border-t border-gray-800/60">
+          <!-- Top Row: 4 grid items -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openCanThoLightbox('MGH00959.jpg')">
+              <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/DIC_Victory_Can_Tho/MGH00959.jpg');"></div>
+            </div>
+            <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openCanThoLightbox('MGH00776.jpg')">
+              <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/DIC_Victory_Can_Tho/MGH00776.jpg');"></div>
+            </div>
+            <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openCanThoLightbox('MGH00777.jpg')">
+              <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/DIC_Victory_Can_Tho/MGH00777.jpg');"></div>
+            </div>
+            <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openCanThoLightbox('MGH01068.jpg')">
+              <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/DIC_Victory_Can_Tho/MGH01068.jpg');"></div>
+            </div>
+          </div>
+
+          <!-- Bottom Row: Showcase layout (1/3 left stack & 2/3 right main showcase) -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+            <!-- Stack of Two Left Images (Left, spans 4/12) -->
+            <div class="md:col-span-4 flex flex-col justify-between gap-4">
+              <div class="relative flex-1 aspect-[16/10] md:aspect-auto overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openCanThoLightbox('MGH01075.jpg')">
+                <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/DIC_Victory_Can_Tho/MGH01075.jpg');"></div>
+              </div>
+              <div class="relative flex-1 aspect-[16/10] md:aspect-auto overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openCanThoLightbox('MGH01022.jpg')">
+                <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/DIC_Victory_Can_Tho/MGH01022.jpg');"></div>
+              </div>
+            </div>
+
+            <!-- Big Showcase Image (Right, spans 8/12) -->
+            <div class="md:col-span-8 relative aspect-[16/10] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-lg cursor-pointer" onclick="openCanThoLightbox('MGH00891.jpg')">
+              <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/DIC_Victory_Can_Tho/MGH00891.jpg');"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<script>
+  function openCanThoLightbox(imgName) {
+    if (typeof openLightbox === 'function' && typeof IMAGES_DATA !== 'undefined') {
+      const albumIdx = IMAGES_DATA.findIndex(a => a.folderName === 'DIC_Victory_Can_Tho');
+      if (albumIdx !== -1) {
+        const imagesList = getSectionImages('blockbuster-2');
+        const imgIdx = imagesList.findIndex(img => img.includes(imgName));
+        openLightbox(albumIdx, imgIdx !== -1 ? imgIdx : 0, imagesList);
+      }
+    }
+  }
+</script>

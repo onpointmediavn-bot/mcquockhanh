@@ -1,0 +1,77 @@
+<!-- ==========================================
+     SECTION 17 — CHƯƠNG TRÌNH NGHỆ THUẬT QUÁN TÌNH - VÙNG ĐẤT VĂN HIẾN
+     ========================================== -->
+<section class="poster-container bg-navy border-t border-gray-900/80" id="poster-quantinh">
+  <div class="poster-bg opacity-15" style="background-image: url('assets/images/Hoi_lang/anh_toan.jpeg');"></div>
+  <div class="poster-overlay-gradient"></div>
+
+  <div class="poster-content max-w-6xl mx-auto px-4 relative z-10 text-center space-y-12">
+    <!-- Header -->
+    <div class="max-w-4xl mx-auto space-y-4">
+      <div class="flex justify-between items-center text-billing-credit max-w-md mx-auto mb-2">
+        <div>LỄ HỘI VĂN HÓA TRUYỀN THỐNG</div>
+        <div class="text-burntOrange font-semibold">TÔN VINH DI SẢN</div>
+      </div>
+      <h2 class="text-3xl md:text-5xl text-cinematic-title text-white tracking-wide glow-text-orange leading-tight uppercase font-bold">
+        Chương trình Nghệ thuật "Quán Tình - Vùng đất Văn hiến"
+      </h2>
+    </div>
+
+    <!-- Asymmetric Spotlight Row (2 prominent images) -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 max-w-5xl mx-auto">
+      <!-- 7/12 Left Main Widescreen Showcase -->
+      <div class="md:col-span-7 relative aspect-[16/10] overflow-hidden rounded-xl border border-gray-800/80 group transition-all duration-300 shadow-[0_20px_50px_rgba(0,0,0,0.85)] cursor-pointer" onclick="openQuanTinhLightbox('anh_toan.jpeg')">
+        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Hoi_lang/anh_toan.jpeg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+      </div>
+
+      <!-- 5/12 Right Auxiliary Showcase -->
+      <div class="md:col-span-5 relative aspect-[16/10] overflow-hidden rounded-xl border border-gray-800/80 group transition-all duration-300 shadow-[0_20px_50px_rgba(0,0,0,0.85)] cursor-pointer" onclick="openQuanTinhLightbox('IMG_8743.jpg')">
+        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Hoi_lang/IMG_8743.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+      </div>
+    </div>
+
+    <!-- Balanced Grid of 6 Traditional Photos -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+      <div class="relative aspect-[3/2] overflow-hidden rounded-lg border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openQuanTinhLightbox('IMG_8705.jpg')">
+        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Hoi_lang/IMG_8705.jpg');"></div>
+      </div>
+      <div class="relative aspect-[3/2] overflow-hidden rounded-lg border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openQuanTinhLightbox('IMG_8707.jpg')">
+        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Hoi_lang/IMG_8707.jpg');"></div>
+      </div>
+      <div class="relative aspect-[3/2] overflow-hidden rounded-lg border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openQuanTinhLightbox('IMG_8708.jpg')">
+        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Hoi_lang/IMG_8708.jpg');"></div>
+      </div>
+      <div class="relative aspect-[3/2] overflow-hidden rounded-lg border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openQuanTinhLightbox('IMG_8710.jpg')">
+        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Hoi_lang/IMG_8710.jpg');"></div>
+      </div>
+      <div class="relative aspect-[3/2] overflow-hidden rounded-lg border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openQuanTinhLightbox('IMG_8727.jpg')">
+        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Hoi_lang/IMG_8727.jpg');"></div>
+      </div>
+      <div class="relative aspect-[3/2] overflow-hidden rounded-lg border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openQuanTinhLightbox('IMG_8744.jpg')">
+        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Hoi_lang/IMG_8744.jpg');"></div>
+      </div>
+    </div>
+
+    <!-- Glassmorphic Roles Credits Block -->
+    <div class="billing-block-container !justify-center !mx-auto pt-6 border-t border-gray-800/30">
+      <div class="text-billing-credit">MC DẪN CHƯƠNG TRÌNH <span class="text-billing-bold">QUỐC KHÁNH</span></div>
+      <div class="text-billing-credit">PHONG CÁCH <span class="text-billing-bold">NGHỆ THUẬT DÂN GIAN & DI SẢN</span></div>
+      <div class="text-billing-credit">ĐỊA ĐIỂM <span class="text-billing-bold">HỘI LÀNG TRUYỀN THỐNG QUÁN TÌNH</span></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function openQuanTinhLightbox(imgName) {
+    if (typeof openLightbox === 'function' && typeof IMAGES_DATA !== 'undefined') {
+      const albumIdx = IMAGES_DATA.findIndex(a => a.folderName === 'Hoi_lang');
+      if (albumIdx !== -1) {
+        const imagesList = getSectionImages('poster-quantinh');
+        const imgIdx = imagesList.findIndex(img => img.includes(imgName));
+        openLightbox(albumIdx, imgIdx !== -1 ? imgIdx : 0, imagesList);
+      }
+    }
+  }
+</script>

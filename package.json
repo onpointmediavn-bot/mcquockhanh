@@ -1,0 +1,13 @@
+{
+  "name": "mc-quoc-khanh-event-web",
+  "version": "1.0.0",
+  "description": "Cinematic portfolio for Quốc Khánh",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js",
+    "watch": "node build.js --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

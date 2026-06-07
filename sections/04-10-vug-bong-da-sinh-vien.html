@@ -1,0 +1,71 @@
+<!-- ==========================================
+     SECTION 10 — VÒNG CHUNG KẾT TOÀN QUỐC VUG BÓNG ĐÁ 7 NGƯỜI
+     ========================================== -->
+<section class="poster-container bg-navy border-t border-gray-900/80" id="poster-vug">
+  <div class="poster-bg opacity-15" style="background-image: url('assets/images/VUG/IMG_0200.jpg');"></div>
+  <div class="poster-overlay-gradient"></div>
+
+  <div class="poster-content max-w-7xl mx-auto px-4 relative z-10 text-center">
+    <div class="max-w-4xl mx-auto space-y-4 mb-8">
+      <div class="flex justify-between items-center text-billing-credit">
+        <div>MC QUỐC KHÁNH</div>
+        <div class="text-burntOrange font-semibold">ĐẤU TRƯỜNG SINH VIÊN</div>
+      </div>
+      <h2 class="text-3xl md:text-5xl text-cinematic-title text-white tracking-wide glow-text-orange leading-tight uppercase">
+        Chung Kết Toàn Quốc Bộ Môn Bóng Đá 7 Người
+      </h2>
+      <div class="max-w-md mx-auto border-t border-b border-gray-800 py-3 my-2">
+        <span class="text-xs font-condensed tracking-widest text-amber-500 uppercase">GIẢI THỂ THAO SINH VIÊN VIỆT NAM</span>
+      </div>
+    </div>
+
+    <!-- Layout 7: Parallel Slants / Skewed Wedges Grid (5 images) -->
+    <div class="slant-grid-container max-w-6xl mx-auto">
+      
+      <div class="slant-wrapper cursor-pointer" onclick="openVugLightbox('IMG_0200.jpg')">
+        <div class="slant-inner" style="background-image: url('assets/images/VUG/IMG_0200.jpg');"></div>
+              </div>
+      
+      <div class="slant-wrapper cursor-pointer" onclick="openVugLightbox('TRG00566.jpg')">
+        <div class="slant-inner" style="background-image: url('assets/images/VUG/TRG00566.jpg');"></div>
+      </div>
+      
+      <div class="slant-wrapper cursor-pointer" onclick="openVugLightbox('TRG00618.jpg')">
+        <div class="slant-inner" style="background-image: url('assets/images/VUG/TRG00618.jpg');"></div>
+      </div>
+      
+      <div class="slant-wrapper cursor-pointer" onclick="openVugLightbox('TRG00817.jpg')">
+        <div class="slant-inner" style="background-image: url('assets/images/VUG/TRG00817.jpg');"></div>
+      </div>
+      
+      <div class="slant-wrapper cursor-pointer" onclick="openVugLightbox('TRG09944.jpg')">
+        <div class="slant-inner" style="background-image: url('assets/images/VUG/TRG09944.jpg');"></div>
+      </div>
+      
+    </div>
+
+    <!-- Centered single secondary image at the bottom -->
+    <div class="max-w-2xl mx-auto mt-8 pt-6 border-t border-gray-900/40">
+      <div class="relative aspect-[21/9] overflow-hidden rounded-lg border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openVugLightbox('481249051_1183393616564411_8490100841142159310_n.jpg')">
+        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/VUG/481249051_1183393616564411_8490100841142159310_n.jpg');"></div>
+      </div>
+    </div>
+
+    <div class="text-billing-credit tracking-[0.4em] !text-[9px] mt-12 pt-4 border-t border-gray-800/30 text-center">
+      GIẢI THỂ THAO SINH VIÊN VIỆT NAM • VUG BÓNG ĐÁ 7 NGƯỜI • MC QUỐC KHÁNH
+    </div>
+  </div>
+</section>
+
+<script>
+  function openVugLightbox(imgName) {
+    if (typeof openLightbox === 'function' && typeof IMAGES_DATA !== 'undefined') {
+      const albumIdx = IMAGES_DATA.findIndex(a => a.folderName === 'VUG');
+      if (albumIdx !== -1) {
+        const imagesList = getSectionImages('poster-vug');
+        const imgIdx = imagesList.findIndex(img => img.includes(imgName));
+        openLightbox(albumIdx, imgIdx !== -1 ? imgIdx : 0, imagesList);
+      }
+    }
+  }
+</script>

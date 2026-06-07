@@ -1,0 +1,69 @@
+<!-- ==========================================
+     SECTION 06 — MINI CONCERT VỀ NHÀ
+     ========================================== -->
+<section class="poster-container bg-navy border-t border-gray-900/80" id="poster-glorysol">
+  <div class="poster-bg opacity-15" style="background-image: url('assets/images/Glory_Sol_1125/IMG_6937.jpg');"></div>
+  <div class="poster-overlay-gradient"></div>
+
+  <div class="poster-content max-w-7xl mx-auto px-4 relative z-10 text-center">
+    <div class="max-w-4xl mx-auto space-y-4 mb-10">
+      <div class="flex justify-between items-center text-billing-credit">
+        <div>MC QUỐC KHÁNH</div>
+        <div class="text-burntOrange font-semibold">RA MẮT ẤN TƯỢNG</div>
+      </div>
+      <h2 class="text-3xl md:text-5xl text-cinematic-title text-white tracking-wide glow-text-orange leading-tight uppercase">
+        Mini Concert “Về Nhà” – Glory Sol Thái Thụy
+      </h2>
+    </div>
+
+    <!-- Layout 6: Blockbuster Floating Grid -->
+    <div class="blockbuster-floating-grid max-w-6xl mx-auto mt-8 text-left">
+      <!-- Left Wing -->
+      <div class="floating-wing-left md:translate-y-8">
+        <div class="relative aspect-[4/3] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openMiniConcertLightbox('IMG_6837.jpg')">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Glory_Sol_1125/IMG_6837.jpg');"></div>
+        </div>
+        <div class="relative aspect-[4/3] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openMiniConcertLightbox('H2O_4270.jpg')">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Glory_Sol_1125/H2O_4270.jpg');"></div>
+        </div>
+      </div>
+      
+      <!-- Center Hero Poster -->
+      <div class="floating-hero-poster group cursor-pointer shadow-[0_30px_70px_rgba(0,0,0,0.95)]" onclick="openMiniConcertLightbox('IMG_6937.jpg')">
+        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Glory_Sol_1125/IMG_6937.jpg');"></div>
+              </div>
+
+      <!-- Right Wing -->
+      <div class="floating-wing-right md:-translate-y-8">
+        <div class="relative aspect-[4/3] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openMiniConcertLightbox('H2O_4501.jpg')">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Glory_Sol_1125/H2O_4501.jpg');"></div>
+        </div>
+        <div class="relative aspect-[4/3] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openMiniConcertLightbox('H2O_4237.jpg')">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Glory_Sol_1125/H2O_4237.jpg');"></div>
+        </div>
+        <div class="relative aspect-[4/3] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openMiniConcertLightbox('H2O_4196.jpg')">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Glory_Sol_1125/H2O_4196.jpg');"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="billing-block-container !justify-center !mx-auto mt-16">
+      <div class="text-billing-credit">MC DẪN CHƯƠNG TRÌNH <span class="text-billing-bold">QUỐC KHÁNH</span></div>
+      <div class="text-billing-credit">ĐƠN VỊ <span class="text-billing-bold">GLORY SOL THÁI THỤY</span></div>
+      <div class="text-billing-credit">VAI TRÒ <span class="text-billing-bold">MC DẪN DẮT CONCERT</span></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function openMiniConcertLightbox(imgName) {
+    if (typeof openLightbox === 'function' && typeof IMAGES_DATA !== 'undefined') {
+      const albumIdx = IMAGES_DATA.findIndex(a => a.folderName === 'Glory_Sol_1125');
+      if (albumIdx !== -1) {
+        const imagesList = getSectionImages('poster-glorysol');
+        const imgIdx = imagesList.findIndex(img => img.includes(imgName));
+        openLightbox(albumIdx, imgIdx !== -1 ? imgIdx : 0, imagesList);
+      }
+    }
+  }
+</script>

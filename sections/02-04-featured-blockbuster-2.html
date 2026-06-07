@@ -1,0 +1,69 @@
+<!-- ==========================================
+     SECTION 04 — FEATURED BLOCKBUSTER 3
+     ========================================== -->
+<section class="poster-container bg-navy border-t border-gray-900/80" id="blockbuster-3">
+  <div class="poster-bg opacity-15" style="background-image: url('assets/images/KickOff_GD_2_Daimond_Paragon_BG/Kickoff_Diamond_Paragon-08991.jpg');"></div>
+  <div class="poster-overlay-gradient"></div>
+ 
+  <div class="poster-content max-w-7xl mx-auto px-4 relative z-10 text-center">
+    <div class="max-w-4xl mx-auto space-y-4 mb-8">
+      <span class="text-xs text-cinematic-subtitle text-burntOrange tracking-[0.4em] block">MC QUỐC KHÁNH</span>
+      <h2 class="text-3xl md:text-5xl text-cinematic-title text-white font-bold tracking-tight glow-text-orange leading-tight uppercase">
+        Kick Off dự án Diamond Paragon Bắc Giang
+      </h2>
+    </div>
+
+    <!-- Layout 7: Parallel Slants / Skewed Wedges Grid (5 images) -->
+    <div class="slant-grid-container max-w-6xl mx-auto">
+      
+      <div class="slant-wrapper cursor-pointer" onclick="openDiamondLightbox('Ban_sao_Kickoff_Diamond_Paragon-09059.jpg')">
+        <div class="slant-inner" style="background-image: url('assets/images/KickOff_GD_2_Daimond_Paragon_BG/Ban_sao_Kickoff_Diamond_Paragon-09059.jpg');"></div>
+              </div>
+      
+      <div class="slant-wrapper cursor-pointer" onclick="openDiamondLightbox('Kickoff_Diamond_Paragon-09183.jpg')">
+        <div class="slant-inner" style="background-image: url('assets/images/KickOff_GD_2_Daimond_Paragon_BG/Kickoff_Diamond_Paragon-09183.jpg');"></div>
+      </div>
+      
+      <div class="slant-wrapper cursor-pointer" onclick="openDiamondLightbox('Ban_sao_Kickoff_Diamond_Paragon-08983.jpg')">
+        <div class="slant-inner" style="background-image: url('assets/images/KickOff_GD_2_Daimond_Paragon_BG/Ban_sao_Kickoff_Diamond_Paragon-08983.jpg');"></div>
+      </div>
+      
+      <div class="slant-wrapper cursor-pointer" onclick="openDiamondLightbox('Ban_sao_Kickoff_Diamond_Paragon-09233.jpg')">
+        <div class="slant-inner" style="background-image: url('assets/images/KickOff_GD_2_Daimond_Paragon_BG/Ban_sao_Kickoff_Diamond_Paragon-09233.jpg');"></div>
+      </div>
+      
+      <div class="slant-wrapper cursor-pointer" onclick="openDiamondLightbox('Ban_sao_Kickoff_Diamond_Paragon-09262.jpg')">
+        <div class="slant-inner" style="background-image: url('assets/images/KickOff_GD_2_Daimond_Paragon_BG/Ban_sao_Kickoff_Diamond_Paragon-09262.jpg');"></div>
+      </div>
+      
+    </div>
+
+    <!-- Remaining 2 images at the bottom -->
+    <div class="grid grid-cols-2 gap-4 max-w-3xl mx-auto mt-8 pt-6 border-t border-gray-900/40">
+      <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openDiamondLightbox('Kickoff_Diamond_Paragon-09288.jpg')">
+        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/KickOff_GD_2_Daimond_Paragon_BG/Kickoff_Diamond_Paragon-09288.jpg');"></div>
+      </div>
+      <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openDiamondLightbox('Kickoff_Diamond_Paragon-09362.jpg')">
+        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/KickOff_GD_2_Daimond_Paragon_BG/Kickoff_Diamond_Paragon-09362.jpg');"></div>
+      </div>
+    </div>
+
+    <div class="billing-block-container !justify-center !mx-auto mt-12">
+      <div class="text-billing-credit">MC DẪN CHƯƠNG TRÌNH <span class="text-billing-bold">QUỐC KHÁNH</span></div>
+      <div class="text-billing-credit">VAI TRÒ <span class="text-billing-bold">MC DẪN DẮT LỄ RA MẮT & KICKOFF</span></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function openDiamondLightbox(imgName) {
+    if (typeof openLightbox === 'function' && typeof IMAGES_DATA !== 'undefined') {
+      const albumIdx = IMAGES_DATA.findIndex(a => a.folderName === 'KickOff_GD_2_Daimond_Paragon_BG');
+      if (albumIdx !== -1) {
+        const imagesList = getSectionImages('blockbuster-3');
+        const imgIdx = imagesList.findIndex(img => img.includes(imgName));
+        openLightbox(albumIdx, imgIdx !== -1 ? imgIdx : 0, imagesList);
+      }
+    }
+  }
+</script>

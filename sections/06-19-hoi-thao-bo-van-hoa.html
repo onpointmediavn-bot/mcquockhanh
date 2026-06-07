@@ -1,0 +1,65 @@
+<!-- ==========================================
+     SECTION 23 — HỘI THẢO CƠ SỞ DỮ LIỆU - BỘ VĂN HOÁ
+     ========================================== -->
+<section class="poster-container bg-navy" id="poster-mocst-seminar">
+  <div class="poster-bg opacity-20" style="background-image: url('assets/images/bo sung/bộ văn hoá/IMG_3882.JPG');"></div>
+  <div class="poster-overlay-gradient"></div>
+
+  <div class="poster-content text-center">
+    <div class="max-w-4xl mx-auto space-y-6">
+      <div class="flex justify-between items-center text-billing-credit max-w-4xl mx-auto mb-4">
+        <div>HỘI THẢO CHUYÊN ĐỀ QUỐC GIA</div>
+        <div class="text-burntOrange font-semibold">BỘ VĂN HÓA, THỂ THAO VÀ DU LỊCH</div>
+      </div>
+      
+      <h2 class="text-3xl md:text-5xl text-cinematic-title text-white tracking-wide glow-text-orange leading-tight uppercase font-bold">
+        Hội thảo "Định hướng phát triển cơ sở dữ liệu ngành Văn hóa, Thể thao, Du lịch và Gia đình"
+      </h2>
+
+      <!-- Event Gallery Grid (Editorial Layout for 4 images) -->
+      <div class="space-y-4 mt-8 pt-6 border-t border-gray-800/60 text-left">
+        <!-- Top Row: Main Showcase & Right Stack (3 images) -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+          <!-- Big Showcase Image (Left, spans 8/12) -->
+          <div class="md:col-span-8 relative aspect-[16/10] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-lg cursor-pointer" onclick="openMocstSeminarLightbox('IMG_3882.JPG')">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/bo sung/bộ văn hoá/IMG_3882.JPG');"></div>
+          </div>
+          
+          <!-- Stack of Two Right Images (Right, spans 4/12) -->
+          <div class="md:col-span-4 flex flex-col justify-between gap-4">
+            <div class="relative flex-1 aspect-[16/10] md:aspect-auto overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openMocstSeminarLightbox('NAM_8587.JPG')">
+              <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/bo sung/bộ văn hoá/NAM_8587.JPG');"></div>
+            </div>
+            <div class="relative flex-1 aspect-[16/10] md:aspect-auto overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openMocstSeminarLightbox('NAM_8601.JPG')">
+              <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/bo sung/bộ văn hoá/NAM_8601.JPG');"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Row: 1 Widescreen cinematic image (1 image) -->
+        <div class="relative aspect-[21/9] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openMocstSeminarLightbox('NAM_8557.jpg')">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/bo sung/bộ văn hoá/NAM_8557.jpg');"></div>
+        </div>
+      </div>
+
+      <div class="billing-block-container !justify-start !mx-0">
+        <div class="text-billing-credit">MC DẪN CHƯƠNG TRÌNH <span class="text-billing-bold">QUỐC KHÁNH</span></div>
+        <div class="text-billing-credit">ĐỐI TƯỢNG <span class="text-billing-bold">LÃNH ĐẠO BỘ & CHUYÊN GIA CNTT</span></div>
+        <div class="text-billing-credit">CHỦ TRÌ <span class="text-billing-bold">BỘ VĂN HÓA, THỂ THAO VÀ DU LỊCH</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function openMocstSeminarLightbox(imgName) {
+    if (typeof openLightbox === 'function' && typeof IMAGES_DATA !== 'undefined') {
+      const albumIdx = IMAGES_DATA.findIndex(a => a.folderName === 'bo sung/bộ văn hoá');
+      if (albumIdx !== -1) {
+        const imagesList = getSectionImages('poster-mocst-seminar');
+        const imgIdx = imagesList.findIndex(img => img.includes(imgName));
+        openLightbox(albumIdx, imgIdx !== -1 ? imgIdx : 0, imagesList);
+      }
+    }
+  }
+</script>

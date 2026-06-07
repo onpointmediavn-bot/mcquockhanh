@@ -1,0 +1,84 @@
+<!-- ==========================================
+     SECTION 18 — KHAI MẠC ĐẠI HỘI TDTT PHƯỜNG VIỆT HƯNG
+     ========================================== -->
+<section class="poster-container bg-navy border-t border-gray-900/80" id="poster-viethung-sports">
+  <div class="poster-bg opacity-15" style="background-image: url('assets/images/bo sung/longbien/IMG_6369.jpg');"></div>
+  <div class="poster-overlay-gradient"></div>
+
+  <div class="poster-content max-w-7xl mx-auto px-4 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Column: Large highlight image (spans 5/12) -->
+      <div class="lg:col-span-5 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
+        <div class="space-y-2">
+          <div class="flex justify-between items-center text-billing-credit w-full max-w-sm mb-2">
+            <div>SỰ KIỆN THỂ THAO ĐÔ THỊ</div>
+            <div class="text-burntOrange font-semibold">TINH THẦN ĐOÀN KẾT</div>
+          </div>
+          <h2 class="text-3xl md:text-4xl text-cinematic-title text-white tracking-wide glow-text-orange leading-tight uppercase font-bold">
+            Khai mạc Đại hội Thể dục Thể thao Phường Việt Hưng
+          </h2>
+        </div>
+
+        <!-- Big Highlight Image (Full Proportions) -->
+        <div class="relative w-full max-w-sm overflow-hidden rounded-lg border border-gray-800/80 group transition-all duration-300 polaroid-tilt-left cursor-pointer shadow-lg" onclick="openVietHungLightbox('IMG_6369.jpg')">
+          <img src="assets/images/bo sung/longbien/IMG_6369.jpg" alt="TDTT Việt Hưng" class="w-full h-auto block group-hover:scale-105 transition-transform duration-700">
+                  </div>
+      </div>
+
+      <!-- Right Column: Lưới ảnh 6 tấm còn lại (spans 7/12) -->
+      <div class="lg:col-span-7 space-y-8">
+        
+        <!-- 6-Image Grid with offset tilts - Full images, no crops -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          <!-- Card 1 -->
+          <div class="relative overflow-hidden rounded-lg border border-gray-800/80 group polaroid-tilt-right cursor-pointer" onclick="openVietHungLightbox('IMG_6370.JPG')">
+            <img src="assets/images/bo sung/longbien/IMG_6370.JPG" alt="TDTT Việt Hưng" class="w-full h-auto block group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <!-- Card 2 -->
+          <div class="relative overflow-hidden rounded-lg border border-gray-800/80 group polaroid-tilt-left cursor-pointer" onclick="openVietHungLightbox('IMG_7683.JPG')">
+            <img src="assets/images/bo sung/longbien/IMG_7683.JPG" alt="TDTT Việt Hưng" class="w-full h-auto block group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <!-- Card 3 -->
+          <div class="relative overflow-hidden rounded-lg border border-gray-800/80 group polaroid-tilt-left cursor-pointer" onclick="openVietHungLightbox('IMG_7684.JPG')">
+            <img src="assets/images/bo sung/longbien/IMG_7684.JPG" alt="TDTT Việt Hưng" class="w-full h-auto block group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <!-- Card 4 -->
+          <div class="relative overflow-hidden rounded-lg border border-gray-800/80 group polaroid-tilt-right cursor-pointer" onclick="openVietHungLightbox('IMG_7685.JPG')">
+            <img src="assets/images/bo sung/longbien/IMG_7685.JPG" alt="TDTT Việt Hưng" class="w-full h-auto block group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <!-- Card 5 -->
+          <div class="relative overflow-hidden rounded-lg border border-gray-800/80 group polaroid-tilt-right cursor-pointer" onclick="openVietHungLightbox('IMG_7686.JPG')">
+            <img src="assets/images/bo sung/longbien/IMG_7686.JPG" alt="TDTT Việt Hưng" class="w-full h-auto block group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <!-- Card 6 -->
+          <div class="relative overflow-hidden rounded-lg border border-gray-800/80 group polaroid-tilt-left cursor-pointer" onclick="openVietHungLightbox('IMG_7687.JPG')">
+            <img src="assets/images/bo sung/longbien/IMG_7687.JPG" alt="TDTT Việt Hưng" class="w-full h-auto block group-hover:scale-105 transition-transform duration-700">
+          </div>
+        </div>
+
+        <!-- Glassmorphic Roles Credits Block -->
+        <div class="billing-block-container !justify-start !mx-0">
+          <div class="text-billing-credit">MC DẪN CHƯƠNG TRÌNH <span class="text-billing-bold">QUỐC KHÁNH</span></div>
+          <div class="text-billing-credit">ĐỐI TƯỢNG <span class="text-billing-bold">NHÂN DÂN & CÁN BỘ PHƯỜNG VIỆT HƯNG</span></div>
+          <div class="text-billing-credit">QUY MÔ <span class="text-billing-bold">ĐẠI HỘI THỂ THAO QUẦN CHÚNG</span></div>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<script>
+  function openVietHungLightbox(imgName) {
+    if (typeof openLightbox === 'function' && typeof IMAGES_DATA !== 'undefined') {
+      const albumIdx = IMAGES_DATA.findIndex(a => a.folderName === 'bo sung/longbien');
+      if (albumIdx !== -1) {
+        const imagesList = getSectionImages('poster-viethung-sports');
+        const imgIdx = imagesList.findIndex(img => img.includes(imgName));
+        openLightbox(albumIdx, imgIdx !== -1 ? imgIdx : 0, imagesList);
+      }
+    }
+  }
+</script>

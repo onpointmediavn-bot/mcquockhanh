@@ -1,0 +1,157 @@
+/* Screening Room Gallery Styles */
+.gallery-filter-btn {
+  font-family: var(--condensed);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #8c9bb0;
+  background: rgba(10, 15, 29, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 2px;
+}
+
+.gallery-filter-btn:hover {
+  border-color: var(--burnt-orange);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(223, 84, 44, 0.2);
+}
+
+.gallery-filter-btn.active {
+  background: var(--burnt-orange);
+  border-color: var(--burnt-orange);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(223, 84, 44, 0.45);
+}
+
+/* Movie Poster Grid Card */
+.gallery-card {
+  position: relative;
+  aspect-ratio: 2/3;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(16, 24, 48, 0.45);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.7);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  border-color: rgba(242, 153, 26, 0.6);
+  box-shadow: 0 25px 50px -15px rgba(242, 153, 26, 0.25);
+}
+
+.gallery-card-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-card:hover .gallery-card-img {
+  transform: scale(1.08);
+}
+
+.gallery-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(10, 15, 29, 0.95) 0%, rgba(10, 15, 29, 0.4) 50%, rgba(10, 15, 29, 0.1) 100%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem;
+  transition: background 0.4s ease;
+}
+
+.gallery-card:hover .gallery-card-overlay {
+  background: linear-gradient(0deg, rgba(10, 15, 29, 0.98) 0%, rgba(10, 15, 29, 0.6) 60%, rgba(223, 84, 44, 0.15) 100%);
+}
+
+.gallery-card-play {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.6);
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(223, 84, 44, 0.9);
+  border: 1px solid var(--amber);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(223, 84, 44, 0.5);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 3;
+}
+
+.gallery-card:hover .gallery-card-play {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.gallery-card-play svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  margin-left: 2px;
+}
+
+.gallery-card-info {
+  position: relative;
+  z-index: 4;
+}
+
+.gallery-card-category {
+  font-family: var(--condensed);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--burnt-orange);
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.gallery-card-title {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.gallery-card:hover .gallery-card-title {
+  color: var(--amber);
+}
+
+.gallery-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 0.5rem;
+  font-family: var(--condensed);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.gallery-card-count {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-size: 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}

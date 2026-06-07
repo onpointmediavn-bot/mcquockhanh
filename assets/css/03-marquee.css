@@ -1,0 +1,28 @@
+/* Infinite Logo Marquee */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 45s linear infinite;
+}
+
+.marquee-track img {
+  height: clamp(52px, 7vh, 68px);
+  width: auto;
+  object-fit: contain;
+  margin: 0 2.5rem;
+  opacity: 1;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.marquee-track img:hover {
+  transform: scale(1.08);
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.3333%); /* Resets after 1/3 of the populated list (since we triple clone) */
+  }
+}

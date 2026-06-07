@@ -1,0 +1,42 @@
+<!-- ==========================================
+     SECTION 15 — REAL ESTATE PROJECT ARCHIVE
+     ========================================== -->
+<section class="poster-container bg-navy border-t border-gray-900/80" id="real-estate-archive">
+  <div class="poster-overlay-gradient"></div>
+  
+  <style>
+    #real-estate-grid::-webkit-scrollbar {
+      height: 6px;
+    }
+    #real-estate-grid::-webkit-scrollbar-track {
+      background: rgba(10, 15, 29, 0.6);
+      border-radius: 4px;
+    }
+    #real-estate-grid::-webkit-scrollbar-thumb {
+      background: rgba(223, 84, 44, 0.4);
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    #real-estate-grid::-webkit-scrollbar-thumb:hover {
+      background: rgba(242, 153, 26, 0.8);
+    }
+  </style>
+
+  <div class="poster-content max-w-7xl mx-auto px-4 relative z-10">
+    
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <span class="text-xs text-cinematic-subtitle text-burntOrange tracking-[0.4em] block mb-2 glow-text-orange">LƯU TRỮ HÌNH ẢNH</span>
+      <h2 class="text-4xl md:text-6xl text-cinematic-title text-white tracking-wide leading-none font-bold">MỘT SỐ SỰ KIỆN KHÁC</h2>
+      <p class="text-gray-400 font-serif italic text-base md:text-lg mt-3 max-w-xl mx-auto">
+        "Hồ sơ lưu trữ hình ảnh thực tế các sự kiện, lễ khởi công và kick-off dự án nổi bật khác."
+      </p>
+    </div>
+
+    <!-- Gallery Scroll Row -->
+    <div class="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scroll-smooth" id="real-estate-grid">
+      <!-- Dynamically populated from JS -->
+    </div>
+
+  </div>
+</section>

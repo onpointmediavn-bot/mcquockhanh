@@ -1,0 +1,41 @@
+/* Cinematic Lightbox Modal Elements */
+#lightbox-filmstrip::-webkit-scrollbar {
+  height: 4px;
+}
+
+#lightbox-filmstrip::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+#lightbox-filmstrip::-webkit-scrollbar-thumb {
+  background: var(--steel-gray);
+  border-radius: 2px;
+}
+
+#lightbox-filmstrip::-webkit-scrollbar-thumb:hover {
+  background: var(--burnt-orange);
+}
+
+.lightbox-thumb {
+  height: clamp(40px, 6vh, 60px);
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  cursor: pointer;
+  filter: grayscale(100%) brightness(70%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+  border-radius: 2px;
+}
+
+.lightbox-thumb:hover {
+  filter: grayscale(0%) brightness(100%);
+  border-color: var(--amber);
+}
+
+.lightbox-thumb.active {
+  filter: grayscale(0%) brightness(100%);
+  border-color: var(--burnt-orange);
+  box-shadow: 0 0 10px var(--glow-orange);
+  transform: scale(1.05);
+}

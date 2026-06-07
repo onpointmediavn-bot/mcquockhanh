@@ -1,0 +1,73 @@
+<!-- ==========================================
+     SECTION 05 — KICKOFF PHÚ GIA RESIDENCE
+     ========================================== -->
+<section class="poster-container bg-navy border-t border-gray-900/80" id="poster-phugia">
+  <div class="poster-bg opacity-15" style="background-image: url('assets/images/kickoff_phu_gia/NTCS0001_(136_of_604).jpg');"></div>
+  <div class="poster-overlay-gradient"></div>
+
+  <div class="poster-content max-w-7xl mx-auto px-4 relative z-10">
+    <div class="magazine-container">
+      
+      <!-- Left Column: Large tilted spotlight image (spans 5/12) -->
+      <div class="magazine-left">
+        <div class="magazine-portrait-frame group cursor-pointer shadow-[0_20px_50px_rgba(0,0,0,0.85)]" onclick="openPhuGiaLightbox('NTCS0001_(136_of_604).jpg')">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/kickoff_phu_gia/NTCS0001_(136_of_604).jpg');"></div>
+                  </div>
+      </div>
+
+      <!-- Right Column: Title and grid of 6 landscape images (spans 7/12) -->
+      <div class="magazine-right space-y-6">
+        <div class="space-y-2 text-left">
+          <div class="flex justify-between items-center text-billing-credit">
+            <div>MC QUỐC KHÁNH</div>
+            <div class="text-burntOrange font-semibold">RA MẮT ẤN TƯỢNG</div>
+          </div>
+          <h2 class="text-3xl md:text-5xl text-cinematic-title text-white tracking-wide glow-text-orange leading-tight uppercase">
+            Kickoff Dự án Phú Gia Residence
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+          <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openPhuGiaLightbox('NTCS0001_(203_of_604).jpg')">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/kickoff_phu_gia/NTCS0001_(203_of_604).jpg');"></div>
+          </div>
+          <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openPhuGiaLightbox('NTCS0001_(419_of_604).jpg')">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/kickoff_phu_gia/NTCS0001_(419_of_604).jpg');"></div>
+          </div>
+          <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openPhuGiaLightbox('NTCS0001_(472_of_604).jpg')">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/kickoff_phu_gia/NTCS0001_(472_of_604).jpg');"></div>
+          </div>
+          <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openPhuGiaLightbox('NTCS0001_(437_of_604).jpg')">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/kickoff_phu_gia/NTCS0001_(437_of_604).jpg');"></div>
+          </div>
+          <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openPhuGiaLightbox('NTCS0001_(430_of_604).jpg')">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/kickoff_phu_gia/NTCS0001_(430_of_604).jpg');"></div>
+          </div>
+          <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openPhuGiaLightbox('NTCS0001_(382_of_604).jpg')">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/kickoff_phu_gia/NTCS0001_(382_of_604).jpg');"></div>
+          </div>
+        </div>
+
+        <div class="billing-block-container !justify-start !mx-0">
+          <div class="text-billing-credit">MC DẪN CHƯƠNG TRÌNH <span class="text-billing-bold">QUỐC KHÁNH</span></div>
+          <div class="text-billing-credit">ĐƠN VỊ <span class="text-billing-bold">PHÚ GIA GROUP</span></div>
+          <div class="text-billing-credit">VAI TRÒ <span class="text-billing-bold">MC DẪN DẮT SỰ KIỆN KICKOFF</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  function openPhuGiaLightbox(imgName) {
+    if (typeof openLightbox === 'function' && typeof IMAGES_DATA !== 'undefined') {
+      const albumIdx = IMAGES_DATA.findIndex(a => a.folderName === 'kickoff_phu_gia');
+      if (albumIdx !== -1) {
+        const imagesList = getSectionImages('poster-phugia');
+        const imgIdx = imagesList.findIndex(img => img.includes(imgName));
+        openLightbox(albumIdx, imgIdx !== -1 ? imgIdx : 0, imagesList);
+      }
+    }
+  }
+</script>

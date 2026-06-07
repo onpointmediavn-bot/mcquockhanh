@@ -1,0 +1,43 @@
+/* Import Google Fonts for Cinematic Styles */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Oswald:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --navy: #0a0f1d;
+  --storm-blue: #161e31;
+  --burnt-orange: #df542c;
+  --amber: #f2991a;
+  --steel-gray: #3a4655;
+  --crimson: #921a22;
+  --indigo: #1a152d;
+  --glow-orange: rgba(223, 84, 44, 0.45);
+  --glow-amber: rgba(242, 153, 26, 0.35);
+  --glow-crimson: rgba(146, 26, 34, 0.4);
+  --projector-beam: radial-gradient(circle 600px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(242, 153, 26, 0.04) 0%, rgba(10, 15, 29, 0) 100%);
+  --glass-bg: rgba(10, 15, 29, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: blur(12px);
+  --sans: 'Inter', sans-serif;
+  --serif: 'Cormorant Garamond', serif;
+  --condensed: 'Oswald', sans-serif;
+}
+
+/* Base resets & scrollsnap */
+html {
+  scroll-behavior: auto; /* Managed by Lenis */
+  background-color: var(--navy);
+  color: #f1f3f9;
+  font-family: var(--sans);
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+
+/* Base styles configured */

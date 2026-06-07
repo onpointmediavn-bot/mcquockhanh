@@ -1,0 +1,78 @@
+<!-- ==========================================
+     SECTION 19 — GIAO LƯU VĂN HÓA VIỆT NAM - NHẬT BẢN
+     ========================================== -->
+<section class="poster-container bg-navy border-t border-gray-900/80" id="poster-viet-japan">
+  <div class="poster-bg opacity-15" style="background-image: url('assets/images/giao_luu_van_hoa_Viet_Nhat/MEOW1461.jpg');"></div>
+  <div class="poster-overlay-gradient"></div>
+
+  <div class="poster-content max-w-7xl mx-auto px-4 relative z-10">
+    <div class="magazine-container">
+      
+      <!-- Left Column: Large tilted spotlight image (spans 5/12) -->
+      <div class="magazine-left">
+        <div class="magazine-portrait-frame group cursor-pointer shadow-[0_20px_50px_rgba(0,0,0,0.85)]" onclick="openVietJapanLightbox('MEOW1461.jpg')">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/giao_luu_van_hoa_Viet_Nhat/MEOW1461.jpg');"></div>
+                  </div>
+      </div>
+
+      <!-- Right Column: Title and grid of 8 secondary images (spans 7/12) -->
+      <div class="magazine-right space-y-6">
+        <div class="space-y-2 text-left">
+          <div class="flex justify-between items-center text-billing-credit">
+            <div>SỰ KIỆN GIAO LƯU QUỐC TẾ</div>
+            <div class="text-burntOrange font-semibold">HỮU NGHỊ VIỆT - NHẬT</div>
+          </div>
+          <h2 class="text-3xl md:text-5xl text-cinematic-title text-white tracking-wide glow-text-orange leading-tight uppercase font-bold">
+            Giao lưu Văn hóa Việt Nam - Nhật Bản
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openVietJapanLightbox('LINH3264.jpg')">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/giao_luu_van_hoa_Viet_Nhat/LINH3264.jpg');"></div>
+          </div>
+          <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openVietJapanLightbox('LINH3261.jpg')">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/giao_luu_van_hoa_Viet_Nhat/LINH3261.jpg');"></div>
+          </div>
+          <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openVietJapanLightbox('LINH3109.jpg')">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/giao_luu_van_hoa_Viet_Nhat/LINH3109.jpg');"></div>
+          </div>
+          <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openVietJapanLightbox('LINH3102.jpg')">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/giao_luu_van_hoa_Viet_Nhat/LINH3102.jpg');"></div>
+          </div>
+          <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openVietJapanLightbox('LINH3014.jpg')">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/giao_luu_van_hoa_Viet_Nhat/LINH3014.jpg');"></div>
+          </div>
+          <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openVietJapanLightbox('_DSC9254.jpg')">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/giao_luu_van_hoa_Viet_Nhat/_DSC9254.jpg');"></div>
+          </div>
+          <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openVietJapanLightbox('_DSC9239.jpg')">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/giao_luu_van_hoa_Viet_Nhat/_DSC9239.jpg');"></div>
+          </div>
+          <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openVietJapanLightbox('_DSC9093.jpg')">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/giao_luu_van_hoa_Viet_Nhat/_DSC9093.jpg');"></div>
+          </div>
+        </div>
+
+        <div class="billing-block-container !justify-start !mx-0">
+          <div class="text-billing-credit">MC DẪN CHƯƠNG TRÌNH <span class="text-billing-bold">QUỐC KHÁNH</span></div>
+          <div class="text-billing-credit">THỂ LOẠI <span class="text-billing-bold">GIAO LƯU VĂN HÓA QUỐC TẾ</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  function openVietJapanLightbox(imgName) {
+    if (typeof openLightbox === 'function' && typeof IMAGES_DATA !== 'undefined') {
+      const albumIdx = IMAGES_DATA.findIndex(a => a.folderName === 'giao_luu_van_hoa_Viet_Nhat');
+      if (albumIdx !== -1) {
+        const imagesList = getSectionImages('poster-viet-japan');
+        const imgIdx = imagesList.findIndex(img => img.includes(imgName));
+        openLightbox(albumIdx, imgIdx !== -1 ? imgIdx : 0, imagesList);
+      }
+    }
+  }
+</script>

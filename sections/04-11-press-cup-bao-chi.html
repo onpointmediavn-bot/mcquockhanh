@@ -1,0 +1,73 @@
+<!-- ==========================================
+         SECTION 11 — PRESS CUP LẦN THỨ 9
+         ========================================== -->
+    <section class="poster-container bg-navy" id="poster-presscup">
+      <div class="poster-bg opacity-20" style="background-image: url('assets/images/Press Cup 2025/499228437_1240657497504689_4447720040074965892_n.jpg');"></div>
+      <div class="poster-overlay-gradient"></div>
+
+      <div class="poster-content text-center">
+        <div class="max-w-4xl mx-auto space-y-6">
+          <div class="flex justify-between items-center text-billing-credit">
+            <div>MC QUỐC KHÁNH</div>
+            <div class="text-burntOrange font-semibold">ĐẤU TRƯỜNG BÁO CHÍ</div>
+          </div>
+          
+          <h2 class="text-3xl md:text-5xl text-cinematic-title text-white tracking-wide glow-text-orange leading-tight uppercase">
+            Giải Bóng Đá Các Cơ Quan Báo Chí Toàn Quốc – Press Cup Lần Thứ 9
+          </h2>
+          <div class="max-w-md mx-auto border-t border-b border-gray-800 py-3 my-2">
+            <span class="text-xs font-condensed tracking-widest text-amber-500 uppercase">TINH THẦN THỂ THAO & BÁO CHÍ</span>
+          </div>
+
+          <!-- Event Gallery Grid (Editorial Layout for 6 images) -->
+          <div class="space-y-4 mt-8 pt-6 border-t border-gray-800/60 text-left">
+            <!-- Top Row: Main Showcase & Right Stack -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+              <!-- Big Showcase Image (Left, spans 8/12) -->
+              <div class="md:col-span-8 relative aspect-[16/10] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-lg cursor-pointer" onclick="openPressCupLightbox('499228437_1240657497504689_4447720040074965892_n.jpg')">
+                <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Press Cup 2025/499228437_1240657497504689_4447720040074965892_n.jpg');"></div>
+              </div>
+              
+              <!-- Stack of Two Right Images (Right, spans 4/12) -->
+              <div class="md:col-span-4 flex flex-col justify-between gap-4">
+                <div class="relative flex-1 aspect-[16/10] md:aspect-auto overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openPressCupLightbox('499153925_1240657560838016_4082801394901757391_n.jpg')">
+                  <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Press Cup 2025/499153925_1240657560838016_4082801394901757391_n.jpg');"></div>
+                </div>
+                <div class="relative flex-1 aspect-[16/10] md:aspect-auto overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openPressCupLightbox('499752892_1240657590838013_3736113795354039419_n.jpg')">
+                  <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Press Cup 2025/499752892_1240657590838013_3736113795354039419_n.jpg');"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Row: 3 grid items -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openPressCupLightbox('499186803_1240657617504677_778117871055436173_n.jpg')">
+                <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Press Cup 2025/499186803_1240657617504677_778117871055436173_n.jpg');"></div>
+              </div>
+              <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openPressCupLightbox('499577488_1240657667504672_8636426153663741308_n.jpg')">
+                <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Press Cup 2025/499577488_1240657667504672_8636426153663741308_n.jpg');"></div>
+              </div>
+              <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openPressCupLightbox('498733583_1240657557504683_619734786750634430_n.jpg')">
+                <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Press Cup 2025/498733583_1240657557504683_619734786750634430_n.jpg');"></div>
+              </div>
+            </div>
+          </div>
+          <div class="text-billing-credit tracking-[0.4em] !text-[9px] mt-6 pt-4 border-t border-gray-800/30">
+            BÓNG ĐÁ BÁO CHÍ • TINH THẦN ĐỒNG ĐỘI • MC QUỐC KHÁNH
+          </div>
+        </div>
+      </div>
+    </section>
+
+<script>
+  function openPressCupLightbox(imgName) {
+    if (typeof openLightbox === 'function' && typeof IMAGES_DATA !== 'undefined') {
+      const albumIdx = IMAGES_DATA.findIndex(a => a.folderName === 'Press Cup 2025');
+      if (albumIdx !== -1) {
+        const imagesList = getSectionImages('poster-presscup');
+        const imgIdx = imagesList.findIndex(img => img.includes(imgName));
+        openLightbox(albumIdx, imgIdx !== -1 ? imgIdx : 0, imagesList);
+      }
+    }
+  }
+</script>

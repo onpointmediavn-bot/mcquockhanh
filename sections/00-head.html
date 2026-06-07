@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quốc Khánh — MC Sự Kiện Chuyên Nghiệp — Cinematic Portfolio</title>
+  <meta name="description" content="Khám phá hồ sơ năng lực dẫn chương trình (MC) chuyên nghiệp của Quốc Khánh qua phong cách điện ảnh ấn tượng, chuyên dẫn dắt các hội nghị cao cấp, lễ ra mắt xa xỉ và đại nhạc hội.">
+  
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0a0f1d',
+            stormBlue: '#161e31',
+            burntOrange: '#df542c',
+            amber: '#f2991a',
+            steelGray: '#3a4655',
+            crimson: '#921a22',
+            indigo: '#1a152d'
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            condensed: ['Oswald', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lenis Smooth Scroll CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-navy text-gray-100 overflow-x-hidden selection:bg-burntOrange selection:text-white">
+
+  <!-- Projector Beam Overlay -->
+  <div class="projector-glow"></div>
+
+  <!-- Audio Visualizer Floating Indicator (Cinematic Detail) -->
+  <div class="fixed bottom-6 right-6 z-50 flex items-center space-x-2 bg-navy/80 border border-gray-800 backdrop-blur-md px-3 py-2 rounded-full cursor-pointer hover:border-burntOrange transition-colors" id="musicToggle">
+    <div class="flex items-end space-x-[2px] h-3 w-4" id="visualizer-bars">
+      <div class="w-[2px] bg-amber h-1 animate-pulse"></div>
+      <div class="w-[2px] bg-amber h-3 animate-pulse"></div>
+      <div class="w-[2px] bg-amber h-2 animate-pulse"></div>
+      <div class="w-[2px] bg-amber h-4 animate-pulse"></div>
+    </div>
+    <span class="text-[10px] font-condensed tracking-widest text-amber-500 uppercase">ÂM THANH KHÔNG GIAN</span>
+    <!-- Hidden audio element for ambient theater hum -->
+    <audio id="ambientHum" loop src="https://assets.mixkit.co/active_storage/sfx/2568/2568-84.wav"></audio>
+  </div>
+
+  <!-- Teaser Trailer Showreel Modal -->
+  <div id="videoModal" class="fixed inset-0 bg-navy/95 z-50 hidden flex items-center justify-center p-4 backdrop-blur-lg">
+    <div class="relative w-full max-w-5xl aspect-video bg-black border border-gray-800 rounded-lg overflow-hidden shadow-2xl">
+      <button id="closeModal" class="absolute top-4 right-4 z-10 text-white hover:text-burntOrange font-condensed text-lg tracking-widest bg-navy/60 px-4 py-2 border border-gray-800 rounded">
+        ĐÓNG TRAILER
+      </button>
+      <div class="w-full h-full flex items-center justify-center">
+        <!-- Responsive video frame placeholder -->
+        <iframe id="videoIframe" class="w-full h-full" src="" title="Quoc Khanh Showreel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cinematic Gallery Lightbox Modal -->
+  <div id="galleryModal" class="fixed inset-0 bg-black/95 z-50 hidden flex flex-col justify-between p-4 md:p-6 backdrop-blur-md select-none">
+    
+    <!-- Top Bar -->
+    <div class="flex justify-between items-center w-full z-10 border-b border-gray-800/60 pb-3">
+      <div>
+        <span class="text-[9px] font-condensed tracking-widest text-burntOrange uppercase block" id="lightbox-album-category">CHUYÊN MỤC</span>
+        <h3 class="text-xl md:text-2xl font-serif text-white font-semibold uppercase mt-0.5" id="lightbox-album-title">ALBUM TITLE</h3>
+      </div>
+      <div class="flex items-center space-x-4">
+        <span class="text-xs font-condensed text-gray-500 tracking-wider" id="lightbox-counter">0 / 0</span>
+        <button id="closeGalleryModal" class="text-white hover:text-burntOrange font-condensed text-xs tracking-widest bg-navy/80 hover:bg-navy border border-gray-800 hover:border-burntOrange px-4 py-2 rounded transition-all duration-300">
+          ĐÓNG LƯU TRỮ
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Container (Image & Side Nav Buttons) -->
+    <div class="relative flex-grow flex items-center justify-center my-4 overflow-hidden">
+      
+      <!-- Prev Button -->
+      <button id="lightbox-prev-btn" class="absolute left-2 md:left-6 z-20 w-12 h-12 rounded-full border border-gray-800 hover:border-burntOrange bg-navy/80 hover:bg-navy text-white hover:text-burntOrange flex items-center justify-center transition-all duration-300">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+      </button>
+
+      <!-- Main Image Frame -->
+      <div class="relative max-w-full max-h-[60vh] md:max-h-[65vh] flex items-center justify-center overflow-hidden">
+        <!-- Subtle back glow behind image -->
+        <div class="absolute inset-0 bg-burntOrange/5 rounded-lg blur-2xl pointer-events-none"></div>
+        <img id="lightbox-main-img" class="relative max-w-full max-h-[60vh] md:max-h-[65vh] object-contain rounded shadow-2xl border border-gray-800/40" src="" alt="Active Gallery Image">
+        <video id="lightbox-main-video" class="relative max-w-full max-h-[60vh] md:max-h-[65vh] object-contain rounded shadow-2xl border border-gray-800/40 hidden" controls></video>
+      </div>
+
+      <!-- Next Button -->
+      <button id="lightbox-next-btn" class="absolute right-2 md:right-6 z-20 w-12 h-12 rounded-full border border-gray-800 hover:border-burntOrange bg-navy/80 hover:bg-navy text-white hover:text-burntOrange flex items-center justify-center transition-all duration-300">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+      </button>
+
+    </div>
+
+    <!-- Bottom Controls & Filmstrip -->
+    <div class="w-full space-y-4">
+      
+      <!-- Slideshow Control Toolbar -->
+      <div class="flex justify-center items-center space-x-6">
+        <button id="lightbox-slideshow-btn" class="flex items-center space-x-2 text-xs font-condensed tracking-widest text-gray-400 hover:text-burntOrange bg-navy/80 border border-gray-800 hover:border-burntOrange px-4 py-2 rounded-full transition-all duration-300">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" id="lightbox-play-icon">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+          <span id="lightbox-slideshow-text">BẮT ĐẦU TRÌNH CHIẾU</span>
+        </button>
+      </div>
+
+      <!-- Filmstrip thumbnails scroll area -->
+      <div class="relative w-full border-t border-gray-800/60 pt-4">
+        <div id="lightbox-filmstrip" class="flex overflow-x-auto space-x-3 py-2 px-4 scrollbar-thin scrollbar-thumb-gray-800 scroll-smooth justify-start md:justify-center items-center max-w-7xl mx-auto">
+          <!-- Dynamically populated from JS -->
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Main Container -->
+  <main class="relative z-10">

@@ -1,0 +1,73 @@
+<!-- ==========================================
+     SECTION 10 — MC TRUYỀN HÌNH - PHÁT THANH (SPLIT LAYOUT)
+     ========================================== -->
+<section class="poster-container bg-navy border-t border-gray-900/80" id="poster-mctruyenhinh">
+  <div class="poster-bg opacity-15" style="background-image: url('assets/images/mc_truyen_hinh/IMG_6242.jpg');"></div>
+  <div class="poster-overlay-gradient"></div>
+
+  <div class="poster-content max-w-7xl mx-auto px-4 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Column: Big Spotlight Polaroid (spans 5/12) -->
+      <div class="lg:col-span-5 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
+        <div class="space-y-2">
+          <span class="text-xs text-cinematic-subtitle text-burntOrange tracking-[0.3em] block glow-text-orange">BẢN TIN & TALKSHOW</span>
+          <h2 class="text-4xl md:text-5xl text-cinematic-title text-white tracking-wide leading-tight uppercase">
+            MC TRUYỀN HÌNH<br><span class="text-2xl md:text-3xl font-serif lowercase italic text-gray-400">& Phát thanh</span>
+          </h2>
+        </div>
+
+        <!-- Big Spotlight Image (Full Proportions) -->
+        <div class="relative w-full max-w-sm overflow-hidden rounded-lg border border-gray-800/80 group transition-all duration-300 polaroid-tilt-left cursor-pointer shadow-lg" onclick="openTvLightbox('IMG_6242.jpg')">
+          <img src="assets/images/mc_truyen_hinh/IMG_6242.jpg" alt="MC Truyền hình" class="w-full h-auto block group-hover:scale-105 transition-transform duration-700">
+                  </div>
+      </div>
+
+      <!-- Right Column: Description & Asymmetric Polaroid Staggered Grid (spans 7/12) -->
+      <div class="lg:col-span-7 space-y-8">
+        
+        <!-- 4-Image Editorial Grid with offset tilts - Full images, no crops -->
+        <div class="grid grid-cols-2 gap-6 pt-4">
+          <!-- Card 1 -->
+          <div class="relative overflow-hidden rounded-lg border border-gray-800/80 group polaroid-tilt-right cursor-pointer" onclick="openTvLightbox('IMG_8429.jpg')">
+            <img src="assets/images/mc_truyen_hinh/IMG_8429.jpg" alt="MC Truyền hình" class="w-full h-auto block group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <!-- Card 2 -->
+          <div class="relative overflow-hidden rounded-lg border border-gray-800/80 group polaroid-tilt-left cursor-pointer mt-4 lg:mt-8" onclick="openTvLightbox('IMG_1501.PNG')">
+            <img src="assets/images/mc_truyen_hinh/IMG_1501.PNG" alt="MC Truyền hình" class="w-full h-auto block group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <!-- Card 3 -->
+          <div class="relative overflow-hidden rounded-lg border border-gray-800/80 group polaroid-tilt-left cursor-pointer -mt-2" onclick="openTvLightbox('IMG_0269.jpg')">
+            <img src="assets/images/mc_truyen_hinh/IMG_0269.jpg" alt="MC Truyền hình" class="w-full h-auto block group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <!-- Card 4 -->
+          <div class="relative overflow-hidden rounded-lg border border-gray-800/80 group polaroid-tilt-right cursor-pointer mt-2" onclick="openTvLightbox('IMG_4782.jpg')">
+            <img src="assets/images/mc_truyen_hinh/IMG_4782.jpg" alt="MC Truyền hình" class="w-full h-auto block group-hover:scale-105 transition-transform duration-700">
+          </div>
+        </div>
+
+        <!-- Glassmorphic Roles Credits Block -->
+        <div class="billing-block-container !justify-start !mx-0 !mt-8">
+          <div class="text-billing-credit">MC DẪN CHƯƠNG TRÌNH <span class="text-billing-bold">QUỐC KHÁNH</span></div>
+          <div class="text-billing-credit">ĐƠN VỊ <span class="text-billing-bold">VTV • HTV • VTC NOW • BÁO TỔ QUỐC</span></div>
+          <div class="text-billing-credit">VAI TRÒ <span class="text-billing-bold">BẢN TIN & TALKSHOW CHÍNH LUẬN</span></div>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<script>
+  function openTvLightbox(imgName) {
+    if (typeof openLightbox === 'function' && typeof IMAGES_DATA !== 'undefined') {
+      const albumIdx = IMAGES_DATA.findIndex(a => a.folderName === 'mc_truyen_hinh');
+      if (albumIdx !== -1) {
+        const imagesList = getSectionImages('poster-mctruyenhinh');
+        const imgIdx = imagesList.findIndex(img => img.includes(imgName));
+        openLightbox(albumIdx, imgIdx !== -1 ? imgIdx : 0, imagesList);
+      }
+    }
+  }
+</script>
