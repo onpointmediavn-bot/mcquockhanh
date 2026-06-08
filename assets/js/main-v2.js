@@ -270,8 +270,14 @@ const IMAGES_DATA = [
     "displayName": "Mc Truyen Hinh",
     "category": "others",
     "images": [
+      "assets/images/mc_truyen_hinh/Ban_sao_IMG_0003.jpg",
+      "assets/images/mc_truyen_hinh/Ban_sao_IMG_4722.jpg",
+      "assets/images/mc_truyen_hinh/Ban_sao_IMG_4783.png",
+      "assets/images/mc_truyen_hinh/Ban_sao_IMG_7283_2.jpg",
       "assets/images/mc_truyen_hinh/IMG_0269.jpg",
+      "assets/images/mc_truyen_hinh/IMG_1444.PNG",
       "assets/images/mc_truyen_hinh/IMG_1501.PNG",
+      "assets/images/mc_truyen_hinh/IMG_3298.jpg",
       "assets/images/mc_truyen_hinh/IMG_4782.jpg",
       "assets/images/mc_truyen_hinh/IMG_6242.jpg",
       "assets/images/mc_truyen_hinh/IMG_8429.jpg"
