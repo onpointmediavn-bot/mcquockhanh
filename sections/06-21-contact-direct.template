@@ -1,0 +1,91 @@
+<!-- ==========================================
+     SECTION 21 — THANK YOU (DIRECT CONTACT VERSION)
+     ========================================== -->
+<section class="poster-container bg-indigo/45 min-h-screen" id="contact-credits">
+  <div class="poster-bg opacity-15" style="background-image: url('assets/images/thank_you_bg.jpg');"></div>
+  <div class="poster-overlay-gradient"></div>
+
+  <div class="poster-content flex items-center justify-center min-h-[80vh] text-center">
+    <div class="max-w-3xl px-4 space-y-10">
+      
+      <h2 class="text-5xl md:text-7xl text-cinematic-title text-white leading-tight glow-text-orange uppercase">
+        THANK YOU FOR WATCHING
+      </h2>
+      
+      <p class="text-gray-300 font-serif text-xl md:text-3xl italic tracking-wide">
+        "Hân hạnh được đồng hành cùng Quý đơn vị..."
+      </p>
+
+      <!-- Personal Contact Card -->
+      <div class="pt-8 max-w-xl mx-auto">
+        <div class="bg-stormBlue/85 backdrop-blur-md border border-gray-800 rounded-xl p-6 md:p-8 space-y-6 shadow-2xl relative overflow-hidden text-center">
+          <div class="absolute -right-10 -top-10 w-32 h-32 bg-burntOrange/10 rounded-full blur-2xl"></div>
+          
+          <h3 class="text-lg font-condensed tracking-widest text-amber-500 uppercase">LIÊN HỆ ĐẶT LỊCH / BOOKING</h3>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
+            <!-- Main Phone (Zalo) -->
+            <a href="tel:0823072888" class="flex items-center space-x-3 p-3 bg-navy/60 hover:bg-burntOrange/20 border border-gray-800 rounded-lg transition-all duration-300 group">
+              <div class="w-10 h-10 rounded-full bg-burntOrange/10 flex items-center justify-center text-burntOrange group-hover:bg-burntOrange group-hover:text-white transition-colors duration-300">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="text-[10px] text-gray-500 font-condensed uppercase tracking-wider">Hotline / Zalo</p>
+                <p class="text-sm font-semibold text-white tracking-wide">0823.072.888</p>
+              </div>
+            </a>
+
+            <!-- Secondary Phone -->
+            <a href="tel:0936607183" class="flex items-center space-x-3 p-3 bg-navy/60 hover:bg-burntOrange/20 border border-gray-800 rounded-lg transition-all duration-300 group">
+              <div class="w-10 h-10 rounded-full bg-burntOrange/10 flex items-center justify-center text-burntOrange group-hover:bg-burntOrange group-hover:text-white transition-colors duration-300">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="text-[10px] text-gray-500 font-condensed uppercase tracking-wider">Liên hệ phụ</p>
+                <p class="text-sm font-semibold text-white tracking-wide">0936.607.183</p>
+              </div>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:quockhanh.mcdj@gmail.com" class="flex items-center space-x-3 p-3 bg-navy/60 hover:bg-burntOrange/20 border border-gray-800 rounded-lg transition-all duration-300 group">
+              <div class="w-10 h-10 rounded-full bg-burntOrange/10 flex items-center justify-center text-burntOrange group-hover:bg-burntOrange group-hover:text-white transition-colors duration-300">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="text-[10px] text-gray-500 font-condensed uppercase tracking-wider">Email</p>
+                <p class="text-[11px] font-semibold text-white truncate max-w-[150px] sm:max-w-none">quockhanh.mcdj@gmail.com</p>
+              </div>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/quockhanh.mcdj/" target="_blank" class="flex items-center space-x-3 p-3 bg-navy/60 hover:bg-burntOrange/20 border border-gray-800 rounded-lg transition-all duration-300 group">
+              <div class="w-10 h-10 rounded-full bg-burntOrange/10 flex items-center justify-center text-burntOrange group-hover:bg-burntOrange group-hover:text-white transition-colors duration-300">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.95z"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="text-[10px] text-gray-500 font-condensed uppercase tracking-wider">Facebook</p>
+                <p class="text-sm font-semibold text-white">quockhanh.mcdj</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pt-8 border-t border-gray-800/40 mt-16 max-w-xl mx-auto">
+        <p class="text-[9px] text-gray-600 font-condensed tracking-wider uppercase">
+          © 2026 QUỐC KHÁNH. BẢN QUYỀN HÌNH ẢNH SỰ KIỆN THUỘC VỀ CÁC ĐƠN VỊ TỔ CHỨC TƯƠNG ỨNG.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>

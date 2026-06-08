@@ -56,6 +56,29 @@ def build_config(config):
         with open(output_file, "w", encoding="utf-8") as f:
             f.write(combined_content)
         print(f"Successfully built: {output_file} ({len(files)} files compiled)")
+
+        if ext == ".html":
+            # Also compile contact.html using direct contact template
+            contact_output = os.path.join(os.path.dirname(output_file), "contact.html")
+            template_path = os.path.join(src_dir, "06-21-contact-direct.template")
+            if os.path.exists(template_path):
+                with open(template_path, "r", encoding="utf-8") as tf:
+                    direct_contact_content = tf.read()
+                
+                combined_contact = ""
+                for file in files:
+                    if file == "06-21-contact.html":
+                        content = direct_contact_content
+                    else:
+                        file_path = os.path.join(src_dir, file)
+                        with open(file_path, "r", encoding="utf-8") as f:
+                            content = f.read()
+                    combined_contact += f"<!-- --- START OF FILE: {file} --- -->\n"
+                    combined_contact += content + f"\n<!-- --- END OF FILE: {file} --- -->\n\n"
+                
+                with open(contact_output, "w", encoding="utf-8") as f:
+                    f.write(combined_contact)
+                print(f"Successfully built contact page: {contact_output}")
     except Exception as e:
         print(f"Build failed for {output_file}: {e}")
 
