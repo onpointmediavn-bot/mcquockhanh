@@ -252,7 +252,7 @@
       IMAGES_DATA.push(eximbankSports);
     }
 
-    const sportsFolders = ['Golf', 'Hoa_hau_Viet_Nam_2022', 'eximbank_sports', 'Ấy Loung'];
+    const sportsFolders = ['Golf', 'Hoa_hau_Viet_Nam_2022', 'eximbank_sports', 'Ay_Lounge'];
     
     const sportsAlbums = IMAGES_DATA.filter(album => sportsFolders.includes(album.folderName));
     
@@ -318,7 +318,7 @@
         if (customThumb) {
           previewImg = customThumb;
         }
-      } else if (album.folderName === 'Ấy Loung') {
+      } else if (album.folderName === 'Ay_Lounge') {
         displayName = 'Đêm nhạc kỷ niệm 10 năm Ấy Lounge';
         tagline = '“Không gian âm nhạc nghệ thuật đầy xúc cảm”';
         
