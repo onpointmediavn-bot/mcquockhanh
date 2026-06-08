@@ -58,8 +58,10 @@ def build_config(config):
         print(f"Successfully built: {output_file} ({len(files)} files compiled)")
 
         if ext == ".html":
-            # Also compile contact.html using direct contact template
-            contact_output = os.path.join(os.path.dirname(output_file), "contact.html")
+            # Also compile contact/index.html using direct contact template
+            contact_dir = os.path.join(os.path.dirname(output_file), "contact")
+            os.makedirs(contact_dir, exist_ok=True)
+            contact_output = os.path.join(contact_dir, "index.html")
             template_path = os.path.join(src_dir, "06-21-contact-direct.template")
             if os.path.exists(template_path):
                 with open(template_path, "r", encoding="utf-8") as tf:
