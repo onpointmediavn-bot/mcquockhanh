@@ -58,10 +58,8 @@ def build_config(config):
         print(f"Successfully built: {output_file} ({len(files)} files compiled)")
 
         if ext == ".html":
-            # Also compile contact/index.html using direct contact template
-            contact_dir = os.path.join(os.path.dirname(output_file), "contact")
-            os.makedirs(contact_dir, exist_ok=True)
-            contact_output = os.path.join(contact_dir, "index.html")
+            # Also compile contact.html using direct contact template
+            contact_output = os.path.join(os.path.dirname(output_file), "contact.html")
             template_path = os.path.join(src_dir, "06-21-contact-direct.template")
             if os.path.exists(template_path):
                 with open(template_path, "r", encoding="utf-8") as tf:
@@ -75,9 +73,37 @@ def build_config(config):
                         file_path = os.path.join(src_dir, file)
                         with open(file_path, "r", encoding="utf-8") as f:
                             content = f.read()
+                        if file == "00-head.html":
+                            content = content.replace(
+                                '<title>Quốc Khánh — MC Sự Kiện Chuyên Nghiệp — Cinematic Portfolio</title>',
+                                '<title>Liên hệ MC Quốc Khánh — Booking & Hợp tác</title>'
+                            )
+                            content = content.replace(
+                                '<meta name="description" content="Portfolio MC Quốc Khánh - Chuyên nghiệp & Tận tâm.">',
+                                '<meta name="description" content="Thông tin liên hệ trực tiếp MC Quốc Khánh. Hotline/Zalo: 0823.072.888. Email: quockhanh.mcdj@gmail.com.">'
+                            )
+                            content = content.replace(
+                                '<meta property="og:url" content="https://mcquockhanh.id.vn/">',
+                                '<meta property="og:url" content="https://mcquockhanh.id.vn/contact">'
+                            )
+                            content = content.replace(
+                                '<meta property="og:title" content="Portfolio MC Quốc Khánh">',
+                                '<meta property="og:title" content="Liên hệ MC Quốc Khánh — Booking & Hợp tác">'
+                            )
+                            content = content.replace(
+                                '<meta property="og:description" content="Portfolio MC Quốc Khánh - Chuyên nghiệp & Tận tâm.">',
+                                '<meta property="og:description" content="Thông tin liên hệ trực tiếp MC Quốc Khánh. Hotline/Zalo: 0823.072.888. Email: quockhanh.mcdj@gmail.com.">'
+                            )
+                            content = content.replace(
+                                '<meta name="twitter:title" content="Portfolio MC Quốc Khánh">',
+                                '<meta name="twitter:title" content="Liên hệ MC Quốc Khánh — Booking & Hợp tác">'
+                            )
+                            content = content.replace(
+                                '<meta name="twitter:description" content="Portfolio MC Quốc Khánh - Chuyên nghiệp & Tận tâm.">',
+                                '<meta name="twitter:description" content="Thông tin liên hệ trực tiếp MC Quốc Khánh. Hotline/Zalo: 0823.072.888. Email: quockhanh.mcdj@gmail.com.">'
+                            )
                     combined_contact += f"<!-- --- START OF FILE: {file} --- -->\n"
                     combined_contact += content + f"\n<!-- --- END OF FILE: {file} --- -->\n\n"
-                
                 with open(contact_output, "w", encoding="utf-8") as f:
                     f.write(combined_contact)
                 print(f"Successfully built contact page: {contact_output}")
