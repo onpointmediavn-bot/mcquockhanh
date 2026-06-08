@@ -9,10 +9,9 @@
         <div class="poster-split-grid items-center gap-12">
           <!-- Profile Card Visuals (Left) -->
           <div class="flex justify-center">
-            <div class="vertical-poster-frame w-full max-w-md animate-glow-border">
+            <div class="vertical-poster-frame w-full max-w-md animate-glow-border cursor-pointer" onclick="openProfileLightbox()">
               <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/chan_dung/IMG_5586_2.jpg');"></div>
               <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent"></div>
-
             </div>
           </div>
 
@@ -45,3 +44,11 @@
         </div>
       </div>
     </section>
+
+<script>
+  function openProfileLightbox() {
+    if (typeof openLightbox === 'function' && typeof PORTRAIT_IMAGES !== 'undefined') {
+      openLightbox(-1, 0, PORTRAIT_IMAGES);
+    }
+  }
+</script>

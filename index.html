@@ -201,10 +201,9 @@
         <div class="poster-split-grid items-center gap-12">
           <!-- Profile Card Visuals (Left) -->
           <div class="flex justify-center">
-            <div class="vertical-poster-frame w-full max-w-md animate-glow-border">
+            <div class="vertical-poster-frame w-full max-w-md animate-glow-border cursor-pointer" onclick="openProfileLightbox()">
               <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/chan_dung/IMG_5586_2.jpg');"></div>
               <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent"></div>
-
             </div>
           </div>
 
@@ -237,6 +236,14 @@
         </div>
       </div>
     </section>
+
+<script>
+  function openProfileLightbox() {
+    if (typeof openLightbox === 'function' && typeof PORTRAIT_IMAGES !== 'undefined') {
+      openLightbox(-1, 0, PORTRAIT_IMAGES);
+    }
+  }
+</script>
 <!-- --- END OF FILE: 01-02-character-profile.html --- -->
 
 <!-- --- START OF FILE: 01-02.5-partners.html --- -->
@@ -412,8 +419,8 @@
     <div class="text-center mt-10" id="showreel-load-more-container">
       <button id="showreel-load-more-btn" class="group relative inline-flex items-center justify-center px-8 py-3.5 text-sm font-bold text-white tracking-[0.2em] uppercase transition-all duration-300 bg-transparent border border-gray-700 rounded-full hover:border-burntOrange hover:bg-burntOrange/10 overflow-hidden">
         <span class="relative z-10 flex items-center">
-          XEM THÊM VIDEO
-          <svg class="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          <span class="btn-text">XEM THÊM VIDEO</span>
+          <svg class="w-4 h-4 ml-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
         </span>
       </button>
     </div>
@@ -440,33 +447,74 @@
       });
     });
 
-    // 2. Handle View More Button
+    // 2. Handle View More / Collapse Button
     const loadMoreBtn = document.getElementById('showreel-load-more-btn');
     const loadMoreContainer = document.getElementById('showreel-load-more-container');
-    const hiddenItems = document.querySelectorAll('.showreel-item.hidden');
+    const extraItems = Array.from(document.querySelectorAll('.showreel-item.hidden'));
+    let isExpanded = false;
     
-    if (hiddenItems.length === 0 && loadMoreContainer) {
+    if (extraItems.length === 0 && loadMoreContainer) {
       loadMoreContainer.style.display = 'none';
     }
 
     if (loadMoreBtn) {
+      const btnText = loadMoreBtn.querySelector('.btn-text');
+      const btnIcon = loadMoreBtn.querySelector('svg');
+      
       loadMoreBtn.addEventListener('click', () => {
-        // Show all hidden items with a fade-in effect
-        hiddenItems.forEach((item, index) => {
-          item.classList.remove('hidden');
-          item.style.opacity = '0';
-          item.style.transform = 'translateY(20px)';
+        if (!isExpanded) {
+          // Expand
+          extraItems.forEach((item, index) => {
+            item.classList.remove('hidden');
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+              item.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+              item.style.opacity = '1';
+              item.style.transform = 'translateY(0)';
+            }, index * 100); // Stagger effect
+          });
           
-          setTimeout(() => {
-            item.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
-            item.style.opacity = '1';
-            item.style.transform = 'translateY(0)';
-          }, index * 100); // Stagger effect
-        });
-        
-        // Hide the button container after expanding
-        if (loadMoreContainer) {
-          loadMoreContainer.style.display = 'none';
+          if (btnText) btnText.textContent = "THU GỌN";
+          if (btnIcon) {
+            btnIcon.style.transform = "rotate(180deg)";
+          }
+          isExpanded = true;
+        } else {
+          // Collapse
+          extraItems.forEach((item) => {
+            // Stop any playing iframe video
+            const iframe = item.querySelector('iframe');
+            const overlay = item.querySelector('.custom-video-overlay');
+            if (iframe) {
+              iframe.setAttribute('src', ''); // Stop video play
+            }
+            if (overlay) {
+              overlay.style.opacity = '1';
+              overlay.style.display = 'flex';
+            }
+            
+            item.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+              item.classList.add('hidden');
+            }, 400);
+          });
+          
+          if (btnText) btnText.textContent = "XEM THÊM VIDEO";
+          if (btnIcon) {
+            btnIcon.style.transform = "rotate(0deg)";
+          }
+          
+          // Smooth scroll back to top of video section
+          const videoSection = document.getElementById('video-showreel');
+          if (videoSection) {
+            videoSection.scrollIntoView({ behavior: 'smooth' });
+          }
+          isExpanded = false;
         }
       });
     }

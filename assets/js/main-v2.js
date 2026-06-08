@@ -983,33 +983,48 @@ const PARTNER_LOGOS = [
 
   let activeImagesList = [];
 
+  // Expose data to global window object so inline showcase section scripts can access them
+  if (typeof IMAGES_DATA !== 'undefined') {
+    window.IMAGES_DATA = IMAGES_DATA;
+  }
+  if (typeof PORTRAIT_IMAGES !== 'undefined') {
+    window.PORTRAIT_IMAGES = PORTRAIT_IMAGES;
+  }
+  if (typeof PARTNER_LOGOS !== 'undefined') {
+    window.PARTNER_LOGOS = PARTNER_LOGOS;
+  }
+
   window.openLightbox = function(albumIndex, startImageIndex = 0, customImagesList = null) {
     if (typeof IMAGES_DATA === 'undefined' || !galleryModal) return;
     
     activeAlbumIndex = albumIndex;
     activeImageIndex = startImageIndex;
     
-    const album = IMAGES_DATA[activeAlbumIndex];
-    if (!album) return;
+    const album = activeAlbumIndex !== -1 ? IMAGES_DATA[activeAlbumIndex] : null;
 
     // Use custom list if provided (e.g. only images rendered on the web page)
-    activeImagesList = customImagesList || album.images;
+    activeImagesList = customImagesList || (album ? album.images : []);
     if (!activeImagesList || activeImagesList.length === 0) return;
     
     // Show modal & stop page scroll
     galleryModal.classList.remove('hidden');
-    lenis.stop();
+    if (typeof lenis !== 'undefined') lenis.stop();
 
     // Populate album metadata
-    const categoryMap = {
-      'corporate': 'GALA DOANH NGHIỆP',
-      'cultural': 'LỄ HỘI VĂN HÓA',
-      'sports': 'ĐẤU TRƯỜNG THỂ THAO',
-      'weddings': 'TIỆC CƯỚI CAO CẤP',
-      'others': 'HẬU TRƯỜNG & KHÁC'
-    };
-    lightboxAlbumCategory.textContent = categoryMap[album.category] || album.category;
-    lightboxAlbumTitle.textContent = album.displayName;
+    if (album) {
+      const categoryMap = {
+        'corporate': 'GALA DOANH NGHIỆP',
+        'cultural': 'LỄ HỘI VĂN HÓA',
+        'sports': 'ĐẤU TRƯỜNG THỂ THAO',
+        'weddings': 'TIỆC CƯỚI CAO CẤP',
+        'others': 'HẬU TRƯỜNG & KHÁC'
+      };
+      lightboxAlbumCategory.textContent = categoryMap[album.category] || album.category;
+      lightboxAlbumTitle.textContent = album.displayName;
+    } else {
+      lightboxAlbumCategory.textContent = 'HỒ SƠ HÌNH ẢNH';
+      lightboxAlbumTitle.textContent = 'CHÂN DUNG & HẬU TRƯỜNG';
+    }
 
     // Generate filmstrip thumbnails
     lightboxFilmstrip.innerHTML = '';
@@ -1046,12 +1061,12 @@ const PARTNER_LOGOS = [
       lightboxMainVideo.src = "";
     }
     galleryModal.classList.add('hidden');
-    lenis.start();
+    if (typeof lenis !== 'undefined') lenis.start();
   }
 
   function showSlide(index) {
-    const album = IMAGES_DATA[activeAlbumIndex];
-    if (!album || index < 0 || index >= activeImagesList.length) return;
+    const album = activeAlbumIndex !== -1 ? IMAGES_DATA[activeAlbumIndex] : null;
+    if (index < 0 || index >= activeImagesList.length) return;
 
     activeImageIndex = index;
     const newSrc = activeImagesList[activeImageIndex];
@@ -1121,16 +1136,14 @@ const PARTNER_LOGOS = [
   }
 
   function nextSlide() {
-    const album = IMAGES_DATA[activeAlbumIndex];
-    if (!album) return;
+    if (activeImagesList.length === 0) return;
     let nextIdx = activeImageIndex + 1;
     if (nextIdx >= activeImagesList.length) nextIdx = 0;
     showSlide(nextIdx);
   }
 
   function prevSlide() {
-    const album = IMAGES_DATA[activeAlbumIndex];
-    if (!album) return;
+    if (activeImagesList.length === 0) return;
     let prevIdx = activeImageIndex - 1;
     if (prevIdx < 0) prevIdx = activeImagesList.length - 1;
     showSlide(prevIdx);
@@ -1142,6 +1155,11 @@ const PARTNER_LOGOS = [
     } else {
       startSlideshow();
     }
+  }
+
+  // Handle click on slide to next slide
+  if (lightboxMainImg) {
+    lightboxMainImg.style.cursor = 'zoom-in';
   }
 
   function resetSlideshowInterval() {
@@ -1157,8 +1175,7 @@ const PARTNER_LOGOS = [
     lightboxSlideshowText.textContent = "TẠM DỪNG TRÌNH CHIẾU";
     lightboxPlayIcon.innerHTML = `<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>`;
     
-    const album = IMAGES_DATA[activeAlbumIndex];
-    if (album) {
+    if (activeImagesList.length > 0) {
       const currentSrc = activeImagesList[activeImageIndex];
       const isVideo = currentSrc.endsWith('.mp4') || currentSrc.endsWith('.mov') || currentSrc.endsWith('.webm');
       if (!isVideo) {
@@ -1233,6 +1250,79 @@ const PARTNER_LOGOS = [
     
     return images;
   };
+
+  // ==========================================
+  // FULLSCREEN IMAGE ZOOM OVERLAY IMPLEMENTATION
+  // ==========================================
+  let fullscreenOverlay = document.getElementById('imageFullscreenOverlay');
+  if (!fullscreenOverlay) {
+    fullscreenOverlay = document.createElement('div');
+    fullscreenOverlay.id = 'imageFullscreenOverlay';
+    fullscreenOverlay.className = 'fixed inset-0 bg-black/98 z-[60] hidden flex items-center justify-center cursor-zoom-out opacity-0';
+    fullscreenOverlay.style.transition = 'opacity 0.3s ease';
+    fullscreenOverlay.innerHTML = `
+      <img id="fullscreen-overlay-img" class="max-w-[98vw] max-h-[98vh] object-contain select-none transition-transform duration-300 scale-95" src="" alt="Fullscreen Image">
+      <div class="absolute top-4 right-4 text-white/70 hover:text-white font-condensed text-xs tracking-widest bg-black/40 hover:bg-black/60 px-3 py-1.5 rounded border border-white/10 transition-all">
+        BẤM ĐỂ THOÁT
+      </div>
+    `;
+    document.body.appendChild(fullscreenOverlay);
+    
+    fullscreenOverlay.addEventListener('click', closeFullscreenImg);
+  }
+
+  function openFullscreenImg(src) {
+    const img = document.getElementById('fullscreen-overlay-img');
+    if (img) {
+      img.src = src;
+      // Slight scale-up animation
+      setTimeout(() => {
+        img.classList.remove('scale-95');
+        img.classList.add('scale-100');
+      }, 50);
+    }
+    fullscreenOverlay.classList.remove('hidden');
+    stopSlideshow();
+    
+    // Fade in
+    setTimeout(() => {
+      fullscreenOverlay.style.opacity = '1';
+    }, 10);
+  }
+
+  function closeFullscreenImg() {
+    fullscreenOverlay.style.opacity = '0';
+    const img = document.getElementById('fullscreen-overlay-img');
+    if (img) {
+      img.classList.remove('scale-100');
+      img.classList.add('scale-95');
+    }
+    setTimeout(() => {
+      fullscreenOverlay.classList.add('hidden');
+    }, 300);
+  }
+
+  // Setup click event on the main lightbox image to trigger zoom
+  if (lightboxMainImg) {
+    lightboxMainImg.style.cursor = 'zoom-in';
+    lightboxMainImg.classList.add('transition-transform', 'duration-300', 'hover:scale-[1.01]');
+    lightboxMainImg.addEventListener('click', () => {
+      const src = lightboxMainImg.getAttribute('src');
+      if (src) {
+        openFullscreenImg(src);
+      }
+    });
+  }
+
+  // Handle ESC key to exit fullscreen image zoom if open
+  document.addEventListener('keydown', (e) => {
+    if (fullscreenOverlay && !fullscreenOverlay.classList.contains('hidden')) {
+      if (e.key === 'Escape') {
+        closeFullscreenImg();
+        e.stopPropagation(); // Avoid closing the main lightbox modal
+      }
+    }
+  });
 
 /* --- END OF FILE: 05-lightbox.js --- */
 
