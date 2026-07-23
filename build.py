@@ -11,6 +11,11 @@ CONFIGS = [
         "ext": ".html"
     },
     {
+        "srcDir": os.path.join(ROOT_DIR, "chinhluan_sections"),
+        "outputFile": os.path.join(ROOT_DIR, "chinhluan.html"),
+        "ext": ".html"
+    },
+    {
         "srcDir": os.path.join(ROOT_DIR, "assets", "css"),
         "outputFile": os.path.join(ROOT_DIR, "assets", "css", "style-v2.css"),
         "ext": ".css"
@@ -57,7 +62,7 @@ def build_config(config):
             f.write(combined_content)
         print(f"Successfully built: {output_file} ({len(files)} files compiled)")
 
-        if ext == ".html":
+        if ext == ".html" and output_file == os.path.join(ROOT_DIR, "index.html"):
             # Also compile contact.html using direct contact template
             contact_output = os.path.join(os.path.dirname(output_file), "contact.html")
             template_path = os.path.join(src_dir, "06-21-contact-direct.template")

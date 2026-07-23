@@ -1,0 +1,66 @@
+<!-- ==========================================
+     SECTION 15 — KỶ NIỆM 70 NĂM GIẢI PHÓNG THỦ ĐÔ
+     ========================================== -->
+<section class="poster-container bg-navy border-t border-gray-900/80" id="poster-liberation">
+  <div class="poster-bg opacity-20" style="background-image: url('assets/images/kY_UNG_HAO_HUNMG/IMG_3472.jpg');"></div>
+  <div class="poster-overlay-gradient"></div>
+
+  <div class="poster-content max-w-6xl mx-auto px-4 relative z-10 text-center space-y-12">
+    <!-- Centered Header -->
+    <div class="max-w-4xl mx-auto space-y-4">
+      <div class="flex justify-between items-center text-billing-credit max-w-md mx-auto mb-2">
+        <div>SỰ KIỆN NGHỆ THUẬT CHÍNH LUẬN</div>
+        <div class="text-burntOrange font-semibold">70 NĂM HÀO HÙNG</div>
+      </div>
+      <h2 class="text-3xl md:text-5xl text-cinematic-title text-white tracking-wide glow-text-orange leading-tight uppercase font-bold">
+        Chào mừng Kỷ niệm 70 năm Giải phóng Thủ đô
+      </h2>
+    </div>
+
+    <!-- Grand Widescreen Centerpiece Image -->
+    <div class="relative max-w-5xl mx-auto aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-xl border border-gray-800/80 group transition-all duration-300 shadow-[0_25px_60px_rgba(0,0,0,0.95)] cursor-pointer" onclick="openLiberationLightbox('IMG_3472.jpg')">
+      <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/kY_UNG_HAO_HUNMG/IMG_3472.jpg');"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent"></div>
+    </div>
+
+    <!-- Symmetrical Grid of 6 Landscape Images -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+      <div class="relative aspect-[3/2] overflow-hidden rounded-lg border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openLiberationLightbox('IMG_3471.jpg')">
+        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/kY_UNG_HAO_HUNMG/IMG_3471.jpg');"></div>
+      </div>
+      <div class="relative aspect-[3/2] overflow-hidden rounded-lg border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openLiberationLightbox('IMG_3457.jpg')">
+        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/kY_UNG_HAO_HUNMG/IMG_3457.jpg');"></div>
+      </div>
+      <div class="relative aspect-[3/2] overflow-hidden rounded-lg border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openLiberationLightbox('IMG_3382.jpg')">
+        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/kY_UNG_HAO_HUNMG/IMG_3382.jpg');"></div>
+      </div>
+      <div class="relative aspect-[3/2] overflow-hidden rounded-lg border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openLiberationLightbox('IMG_3381.jpg')">
+        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/kY_UNG_HAO_HUNMG/IMG_3381.jpg');"></div>
+      </div>
+      <div class="relative aspect-[3/2] overflow-hidden rounded-lg border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openLiberationLightbox('IMG_3380.jpg')">
+        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/kY_UNG_HAO_HUNMG/IMG_3380.jpg');"></div>
+      </div>
+      <div class="relative aspect-[3/2] overflow-hidden rounded-lg border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openLiberationLightbox('IMG_3379.jpg')">
+        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/kY_UNG_HAO_HUNMG/IMG_3379.jpg');"></div>
+      </div>
+    </div>
+
+    <!-- Glassmorphic Roles Credits Block -->
+    <div class="billing-block-container !justify-center !mx-auto pt-6 border-t border-gray-800/30">
+      <div class="text-billing-credit">MC DẪN CHƯƠNG TRÌNH <span class="text-billing-bold">QUỐC KHÁNH</span></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function openLiberationLightbox(imgName) {
+    if (typeof openLightbox === 'function' && typeof IMAGES_DATA !== 'undefined') {
+      const albumIdx = IMAGES_DATA.findIndex(a => a.folderName === 'kY_UNG_HAO_HUNMG');
+      if (albumIdx !== -1) {
+        const imagesList = getSectionImages('poster-liberation');
+        const imgIdx = imagesList.findIndex(img => img.includes(imgName));
+        openLightbox(albumIdx, imgIdx !== -1 ? imgIdx : 0, imagesList);
+      }
+    }
+  }
+</script>

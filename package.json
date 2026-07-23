@@ -5,7 +5,8 @@
   "main": "build.js",
   "scripts": {
     "build": "node build.js",
-    "watch": "node build.js --watch"
+    "watch": "node build.js --watch",
+    "server": "python3 -m http.server 8000"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,40 @@
+<!-- ==========================================
+         SECTION 20.5 — THE SCREENING ROOM (EVENT GALLERY)
+         ========================================== -->
+    <section class="poster-container bg-navy border-t border-gray-900/80" id="screening-room">
+      <div class="poster-overlay-gradient"></div>
+      <div class="poster-content max-w-7xl mx-auto px-4 relative z-10">
+        
+        <!-- Header -->
+        <div class="text-center mb-12">
+          <span class="text-xs text-cinematic-subtitle text-burntOrange tracking-[0.4em] block mb-2 glow-text-orange">KHO TÀI LIỆU SỰ KIỆN</span>
+          <h2 class="text-4xl md:text-7xl text-cinematic-title text-white tracking-wide leading-none font-bold">PHÒNG TRÌNH CHIẾU</h2>
+          <p class="text-gray-400 font-serif italic text-base md:text-lg mt-3 max-w-xl mx-auto">
+            "Hành trình nhìn lại hơn một thập kỷ dẫn dắt các chương trình trực tiếp, hội nghị và đại nhạc hội."
+          </p>
+        </div>
+
+        <!-- Filter Genres -->
+        <div class="flex flex-wrap justify-center gap-3 mb-10" id="gallery-filters">
+          <button class="gallery-filter-btn active" data-category="all">TẤT CẢ SỰ KIỆN</button>
+          <button class="gallery-filter-btn" data-category="corporate">GALA DOANH NGHIỆP</button>
+          <button class="gallery-filter-btn" data-category="cultural">LỄ HỘI VĂN HÓA</button>
+          <button class="gallery-filter-btn" data-category="sports">ĐẤU TRƯỜNG THỂ THAO</button>
+          <button class="gallery-filter-btn" data-category="weddings">TIỆC CƯỚI CAO CẤP</button>
+          <button class="gallery-filter-btn" data-category="others">HẬU TRƯỜNG & KHÁC</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="gallery-grid">
+          <!-- Dynamically populated from JS -->
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-12 hidden" id="load-more-container">
+          <button class="px-8 py-3 bg-transparent hover:bg-white/5 border border-gray-800 hover:border-burntOrange text-gray-300 hover:text-white font-condensed tracking-widest text-xs uppercase transition-all duration-300" id="load-more-btn">
+            XEM THÊM SỰ KIỆN LƯU TRỮ
+          </button>
+        </div>
+
+      </div>
+    </section>

@@ -1,0 +1,70 @@
+<!-- ==========================================
+         SECTION 12 — MISS VIETNAM TOUR
+         ========================================== -->
+    <section class="poster-container bg-navy" id="poster-fashion">
+      <div class="poster-bg opacity-25" style="background-image: url('assets/images/Hoa_hau_Viet_Nam_2022/IMG_9848_3.jpg');"></div>
+      <div class="poster-overlay-gradient"></div>
+
+      <div class="poster-content text-center">
+        <div class="max-w-4xl mx-auto space-y-6">
+          <div class="flex justify-between items-center text-billing-credit">
+            <div>MC QUỐC KHÁNH</div>
+            <div class="text-burntOrange font-semibold">HÀNH TRÌNH NHAN SẮC</div>
+          </div>
+          
+          <h2 class="text-3xl md:text-5xl text-cinematic-title text-white tracking-wide glow-text-orange leading-tight">
+            TOUR TUYỂN SINH HOA HẬU VIỆT NAM
+          </h2>
+
+          <!-- Event Gallery Grid (Editorial Layout for 6 images) -->
+          <div class="space-y-4 mt-8 pt-6 border-t border-gray-800/60 text-left">
+            <!-- Top Row: Main Showcase & Right Stack -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+              <!-- Big Showcase Image (Left, spans 8/12) -->
+              <div class="md:col-span-8 relative aspect-[16/10] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-lg cursor-pointer" onclick="openMissVietnamLightbox('IMG_9848_3.jpg')">
+                <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Hoa_hau_Viet_Nam_2022/IMG_9848_3.jpg');"></div>
+              </div>
+              
+              <!-- Stack of Two Right Images (Right, spans 4/12) -->
+              <div class="md:col-span-4 flex flex-col justify-between gap-4">
+                <div class="relative flex-1 aspect-[16/10] md:aspect-auto overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openMissVietnamLightbox('474079517_1156224735947966_1502395780282481117_n.jpg')">
+                  <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Hoa_hau_Viet_Nam_2022/474079517_1156224735947966_1502395780282481117_n.jpg');"></div>
+                </div>
+                <div class="relative flex-1 aspect-[16/10] md:aspect-auto overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openMissVietnamLightbox('HAN_1555_3.jpg')">
+                  <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Hoa_hau_Viet_Nam_2022/HAN_1555_3.jpg');"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Row: 3 grid items -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openMissVietnamLightbox('HAN_2322.jpg')">
+                <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Hoa_hau_Viet_Nam_2022/HAN_2322.jpg');"></div>
+              </div>
+              <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openMissVietnamLightbox('HAN_2245.jpg')">
+                <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Hoa_hau_Viet_Nam_2022/HAN_2245.jpg');"></div>
+              </div>
+              <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openMissVietnamLightbox('307017905_637329037837541_6014113850508808760_n.jpg')">
+                <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/Hoa_hau_Viet_Nam_2022/307017905_637329037837541_6014113850508808760_n.jpg');"></div>
+              </div>
+            </div>
+          </div>
+          <div class="text-billing-credit tracking-[0.4em] !text-[9px] mt-6 pt-4 border-t border-gray-800/30">
+            HOA HẬU VIỆT NAM • TOUR GIAO LƯU TUYỂN SINH ĐẠI HỌC
+          </div>
+        </div>
+      </div>
+    </section>
+
+<script>
+  function openMissVietnamLightbox(imgName) {
+    if (typeof openLightbox === 'function' && typeof IMAGES_DATA !== 'undefined') {
+      const albumIdx = IMAGES_DATA.findIndex(a => a.folderName === 'Hoa_hau_Viet_Nam_2022');
+      if (albumIdx !== -1) {
+        const imagesList = getSectionImages('poster-fashion');
+        const imgIdx = imagesList.findIndex(img => img.includes(imgName));
+        openLightbox(albumIdx, imgIdx !== -1 ? imgIdx : 0, imagesList);
+      }
+    }
+  }
+</script>

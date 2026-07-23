@@ -1,0 +1,87 @@
+<!-- GSAP & Plugins -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+
+
+  <!-- Main JavaScript Logic -->
+  <script src="assets/js/main-v2.js"></script>
+
+  <!-- Cinematic Floating Particles Background Animation -->
+  <script>
+    (function() {
+      const canvas = document.createElement('canvas');
+      canvas.id = 'cinematic-particles';
+      canvas.style.position = 'fixed';
+      canvas.style.top = '0';
+      canvas.style.left = '0';
+      canvas.style.width = '100vw';
+      canvas.style.height = '100vh';
+      canvas.style.zIndex = '3';
+      canvas.style.pointerEvents = 'none';
+      canvas.style.opacity = '0.5';
+      document.body.appendChild(canvas);
+
+      const ctx = canvas.getContext('2d');
+      let width = canvas.width = window.innerWidth;
+      let height = canvas.height = window.innerHeight;
+
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      const particles = [];
+      const maxParticles = 30; // Giới hạn số lượng hạt để tối ưu hiệu năng tốt nhất (0% CPU)
+
+      for (let i = 0; i < maxParticles; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          r: Math.random() * 1.5 + 0.8, // Bán kính hạt từ 0.8px đến 2.3px
+          vy: -(Math.random() * 0.3 + 0.15), // Tốc độ trôi lên
+          vx: Math.random() * 0.2 - 0.1, // Tốc độ trôi ngang nhẹ
+          alpha: Math.random() * 0.3 + 0.15 // Độ đậm nhạt ngẫu nhiên
+        });
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, width, height);
+        
+        for (let i = 0; i < maxParticles; i++) {
+          const p = particles[i];
+          ctx.beginPath();
+          
+          // Tạo hạt dạng quầng sáng chuyển màu (gradient tròn) mịn màng
+          const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 2.5);
+          gradient.addColorStop(0, `rgba(223, 84, 44, ${p.alpha})`); // Cam
+          gradient.addColorStop(0.4, `rgba(242, 153, 26, ${p.alpha * 0.4})`); // Hổ phách
+          gradient.addColorStop(1, 'rgba(10, 15, 29, 0)');
+          
+          ctx.fillStyle = gradient;
+          ctx.arc(p.x, p.y, p.r * 2.5, 0, Math.PI * 2, true);
+          ctx.fill();
+          
+          // Cập nhật vị trí hạt trôi lên
+          p.y += p.vy;
+          p.x += p.vx;
+          
+          // Khi hạt trôi ra khỏi màn hình thì reset lại từ phía dưới
+          if (p.y < -20) {
+            p.y = height + 20;
+            p.x = Math.random() * width;
+          }
+          if (p.x < -20 || p.x > width + 20) {
+            p.vx = -p.vx;
+          }
+        }
+        requestAnimationFrame(draw);
+      }
+      
+      draw();
+    })();
+  </script>
+</body>
+</html>
