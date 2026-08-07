@@ -1,0 +1,42 @@
+<!-- ==========================================
+     SECTION 25 — SPORTS & ENTERTAINMENT ARCHIVE
+     ========================================== -->
+<section class="poster-container bg-navy border-t border-gray-900/80" id="sports-entertainment-archive">
+  <div class="poster-overlay-gradient"></div>
+  
+  <style>
+    #sports-archive-grid::-webkit-scrollbar {
+      height: 6px;
+    }
+    #sports-archive-grid::-webkit-scrollbar-track {
+      background: rgba(10, 15, 29, 0.6);
+      border-radius: 4px;
+    }
+    #sports-archive-grid::-webkit-scrollbar-thumb {
+      background: rgba(223, 84, 44, 0.4);
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    #sports-archive-grid::-webkit-scrollbar-thumb:hover {
+      background: rgba(242, 153, 26, 0.8);
+    }
+  </style>
+
+  <div class="poster-content max-w-7xl mx-auto px-4 relative z-10">
+    
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <span class="text-xs text-cinematic-subtitle text-burntOrange tracking-[0.4em] block mb-2 glow-text-orange">LƯU TRỮ HÌNH ẢNH</span>
+      <h2 class="text-4xl md:text-6xl text-cinematic-title text-white tracking-wide leading-none font-bold">KHO TƯ LIỆU GIẢI TRÍ & THỂ THAO</h2>
+      <p class="text-gray-400 font-serif italic text-base md:text-lg mt-3 max-w-xl mx-auto">
+        "Hồ sơ lưu trữ hình ảnh các sự kiện giải trí, thể thao và tuyển sinh nổi bật."
+      </p>
+    </div>
+
+    <!-- Gallery Scroll Row -->
+    <div class="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scroll-smooth" id="sports-archive-grid">
+      <!-- Dynamically populated from JS -->
+    </div>
+
+  </div>
+</section>

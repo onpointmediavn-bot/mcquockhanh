@@ -127,8 +127,8 @@
   function initRealEstateGallery() {
     if (!realEstateGrid || typeof IMAGES_DATA === 'undefined') return;
     
-    // Display 'ecogarden', 'bo sung/Felia suits', 'dao_tao_BHS', and ' 𝐒𝐢𝐦𝐨𝐧𝐚 𝐇𝐞𝐢𝐠𝐡𝐭𝐬' in the specified order
-    const realEstateFolders = ['ecogarden', 'bo sung/Felia suits', 'dao_tao_BHS', ' 𝐒𝐢𝐦𝐨𝐧𝐚 𝐇𝐞𝐢𝐠𝐡𝐭𝐬'];
+    // Display 'ecogarden', 'bo sung/Felia suits', 'dao_tao_BHS', ' 𝐒𝐢𝐦𝐨𝐧𝐚 𝐇𝐞𝐢𝐠𝐡𝐭s', 'alluvia', 'kickoff_phu_gia' in the specified order (newest first)
+    const realEstateFolders = ['alluvia', 'kickoff_phu_gia', 'ecogarden', 'bo sung/Felia suits', 'dao_tao_BHS', ' 𝐒𝐢𝐦𝐨𝐧𝐚 𝐇𝐞𝐢𝐠𝐡𝐭𝐬'];
     
     const realEstateAlbums = IMAGES_DATA.filter(album => realEstateFolders.includes(album.folderName));
     
@@ -177,6 +177,16 @@
         if (customThumb) {
           previewImg = customThumb;
         }
+      } else if (album.folderName === 'alluvia') {
+        displayName = 'Tọa đàm Đầu tư - Giải mã dòng tiền đầu tư đổ về Alluvia City';
+        tagline = '“Tọa đàm phân tích tài chính chuyên sâu”';
+        const customThumb = album.images.find(img => img.includes('DSC_4640') || img.includes('DSC_4761'));
+        if (customThumb) previewImg = customThumb;
+      } else if (album.folderName === 'kickoff_phu_gia') {
+        displayName = 'Lễ ra quân & Kick-off dự án Phú Gia Residence';
+        tagline = '“Khai mở thịnh vượng - Đón đầu phồn vinh”';
+        const customThumb = album.images.find(img => img.includes('136_of_604') || img.includes('203_of_604'));
+        if (customThumb) previewImg = customThumb;
       }
       
       const card = document.createElement('div');
@@ -252,7 +262,7 @@
       IMAGES_DATA.push(eximbankSports);
     }
 
-    const sportsFolders = ['Golf', 'Hoa_hau_Viet_Nam_2022', 'eximbank_sports', 'Ay_Lounge'];
+    const sportsFolders = ['Giai_bong_ro', 'VUG', 'Press Cup 2025', 'Golf', 'Hoa_hau_Viet_Nam_2022', 'eximbank_sports', 'Ay_Lounge', 'JCI_HANOI'];
     
     const sportsAlbums = IMAGES_DATA.filter(album => sportsFolders.includes(album.folderName));
     
@@ -268,7 +278,35 @@
       let tagline = '';
       let customBgPosition = '';
       
-      if (album.folderName === 'Hoa_hau_Viet_Nam_2022') {
+      if (album.folderName === 'Giai_bong_ro') {
+        displayName = 'Lễ Bế mạc & Trao giải Giải bóng rổ Học sinh Hè Hà Nội - VSBL';
+        tagline = '“Đấu trường học sinh đầy kịch tính”';
+        const customThumb = album.images.find(img => img.includes('IMG_8775.jpg'));
+        if (customThumb) {
+          previewImg = customThumb;
+        }
+      } else if (album.folderName === 'VUG') {
+        displayName = 'Lễ Khai mạc & Giải Thể thao Sinh viên Việt Nam - VUG';
+        tagline = '“Sân chơi thể thao sinh viên rực lửa đam mê”';
+        const customThumb = album.images.find(img => img.includes('IMG_0200.jpg') || img.includes('TRG00817.jpg'));
+        if (customThumb) {
+          previewImg = customThumb;
+        }
+      } else if (album.folderName === 'Press Cup 2025') {
+        displayName = 'Hội thao Bóng đá Báo chí toàn quốc - Press Cup';
+        tagline = '“Hội thao báo chí - Kết nối đam mê”';
+        const customThumb = album.images.find(img => img.includes('499186803'));
+        if (customThumb) {
+          previewImg = customThumb;
+        }
+      } else if (album.folderName === 'JCI_HANOI') {
+        displayName = 'Đấu trường Khởi nghiệp & Diễn đàn "Bình minh chu kỳ mới, khởi sắc cùng SMEs"';
+        tagline = '“Đồng hành cùng JCI Hanoi & đối tác”';
+        const customThumb = album.images.find(img => img.includes('NHAN5799.jpg') || img.includes('NHAN6564.jpg'));
+        if (customThumb) {
+          previewImg = customThumb;
+        }
+      } else if (album.folderName === 'Hoa_hau_Viet_Nam_2022') {
         displayName = 'Tour Tuyển sinh Hoa hậu Việt Nam tại các trường đại học Hà Nội';
         tagline = '“Đại sứ Nhan sắc & Bản lĩnh sinh viên”';
         

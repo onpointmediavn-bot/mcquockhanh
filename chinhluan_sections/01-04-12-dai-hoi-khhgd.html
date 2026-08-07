@@ -1,0 +1,77 @@
+<!-- ==========================================
+     SECTION — ĐẠI HỘI ĐẠI BIỂU HỘI KẾ HOẠCH HÓA GIA ĐÌNH VIỆT NAM (VINAFPA)
+     ========================================== -->
+<section class="poster-container bg-navy border-t border-gray-900/80" id="poster-vinafpa-congress">
+  <div class="poster-bg opacity-15" style="background-image: url('assets/images/DAI HOI KHHGD/DRX01698.JPEG');"></div>
+  <div class="poster-overlay-gradient"></div>
+
+  <div class="poster-content text-center">
+    <div class="max-w-4xl mx-auto space-y-6">
+      
+      <!-- Section Header -->
+      <div class="flex justify-between items-center text-billing-credit">
+        <div>ĐẠI HỘI ĐẠI BIỂU TOÀN QUỐC</div>
+        <div class="text-burntOrange font-semibold">NHIỆM KỲ 2026 – 2031</div>
+      </div>
+      <h2 class="text-3xl md:text-5xl text-cinematic-title text-white tracking-wide glow-text-orange leading-tight uppercase font-bold">
+        Đại hội Đại biểu Hội Kế hoạch hóa gia đình Việt Nam nhiệm kỳ 2026 – 2031
+      </h2>
+
+      <!-- Editorial 7-Image Grid Layout -->
+      <div class="space-y-4 mt-8 pt-6 border-t border-gray-800/60 text-left">
+        <!-- Top Row: Main Showcase (Left 8/12) & Right Stack (Right 4/12) -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+          <!-- Big Showcase Image -->
+          <div class="md:col-span-8 relative aspect-[16/10] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-lg cursor-pointer" onclick="openVinafpaLightbox('DRX01698.JPEG')">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/DAI HOI KHHGD/DRX01698.JPEG');"></div>
+          </div>
+          
+          <!-- Stack of Two Right Images -->
+          <div class="md:col-span-4 flex flex-col justify-between gap-4">
+            <div class="relative flex-1 aspect-[16/10] md:aspect-auto overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openVinafpaLightbox('DRX00500.JPEG')">
+              <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/DAI HOI KHHGD/DRX00500.JPEG');"></div>
+            </div>
+            <div class="relative flex-1 aspect-[16/10] md:aspect-auto overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openVinafpaLightbox('DRX00519 2.JPEG')">
+              <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/DAI HOI KHHGD/DRX00519 2.JPEG');"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Row: 4 equal grid items -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openVinafpaLightbox('DRX00619.JPEG')">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/DAI HOI KHHGD/DRX00619.JPEG');"></div>
+          </div>
+          <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openVinafpaLightbox('DRX01308.JPG')">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/DAI HOI KHHGD/DRX01308.JPG');"></div>
+          </div>
+          <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openVinafpaLightbox('DRX00650.JPEG')">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/DAI HOI KHHGD/DRX00650.JPEG');"></div>
+          </div>
+          <div class="relative aspect-[3/2] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openVinafpaLightbox('DRX01701.JPEG')">
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/DAI HOI KHHGD/DRX01701.JPEG');"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="billing-block-container !justify-start !mx-0">
+        <div class="text-billing-credit">MC DẪN CHƯƠNG TRÌNH <span class="text-billing-bold">QUỐC KHÁNH</span></div>
+        <div class="text-billing-credit">ĐƠN VỊ TỔ CHỨC <span class="text-billing-bold">HỘI KẾ HOẠCH HÓA GIA ĐÌNH VIỆT NAM</span></div>
+        <div class="text-billing-credit">QUY MÔ <span class="text-billing-bold">TOÀN QUỐC</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function openVinafpaLightbox(imgName) {
+    if (typeof openLightbox === 'function' && typeof IMAGES_DATA !== 'undefined') {
+      const albumIdx = IMAGES_DATA.findIndex(a => a.folderName === 'DAI HOI KHHGD');
+      if (albumIdx !== -1) {
+        const imagesList = getSectionImages('poster-vinafpa-congress');
+        const imgIdx = imagesList.findIndex(img => img.includes(imgName));
+        openLightbox(albumIdx, imgIdx !== -1 ? imgIdx : 0, imagesList);
+      }
+    }
+  }
+</script>

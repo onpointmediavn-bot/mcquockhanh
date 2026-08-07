@@ -3,7 +3,7 @@ import re
 import json
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-images_data_file = os.path.join(ROOT_DIR, "assets", "js", "images_data.js")
+images_data_file = os.path.join(ROOT_DIR, "assets", "js", "02.5-images_data.js")
 images_dir = os.path.join(ROOT_DIR, "assets", "images")
 
 folder_metadata = {}
@@ -63,6 +63,27 @@ if os.path.exists(images_dir):
                 files.sort()
                 for f in files:
                     new_partner_logos.append(f"assets/images/don_vi_tung_cong_tac/{f}")
+            elif item_name == "bo sung":
+                bo_sung_path = os.path.join(images_dir, "bo sung")
+                for sub_name in os.listdir(bo_sung_path):
+                    sub_path = os.path.join(bo_sung_path, sub_name)
+                    if os.path.isdir(sub_path):
+                        files = [f for f in os.listdir(sub_path) if is_media_file(f)]
+                        files.sort()
+                        if files:
+                            relative_paths = [f"assets/images/bo sung/{sub_name}/{f}" for f in files]
+                            folder_key = f"bo sung/{sub_name}"
+                            display_name = format_folder_title(sub_name)
+                            category = "others"
+                            if folder_key in folder_metadata:
+                                display_name = folder_metadata[folder_key]["displayName"]
+                                category = folder_metadata[folder_key]["category"]
+                            new_images_data.append({
+                                "folderName": folder_key,
+                                "displayName": display_name,
+                                "category": category,
+                                "images": relative_paths
+                            })
             else:
                 files = [f for f in os.listdir(item_path) if is_media_file(f)]
                 files.sort()

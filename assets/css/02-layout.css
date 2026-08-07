@@ -15,7 +15,9 @@
   font-family: var(--serif);
   font-weight: 700;
   letter-spacing: 0.06em;
-  line-height: 1.1;
+  line-height: 1.45 !important;
+  padding-top: 0.15em;
+  padding-bottom: 0.15em;
   text-transform: uppercase;
   background: linear-gradient(135deg, #ffffff 40%, #ffd3ab 100%);
   -webkit-background-clip: text;
@@ -151,13 +153,15 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.75rem 1.5rem;
-  max-width: 820px;
+  width: 100%;
+  max-width: 100%;
   margin: 3rem auto 0;
   padding: 1.25rem 2rem;
   border: 1px solid var(--glass-border);
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
   border-radius: 6px;
+  box-sizing: border-box;
 }
 
 /* Cinematic Video Play Button */

@@ -42,6 +42,43 @@ const IMAGES_DATA = [
     ]
   },
   {
+    "folderName": "anh ca nhan",
+    "displayName": "Anh Ca Nhan",
+    "category": "others",
+    "images": [
+      "assets/images/anh ca nhan/DJI_20260807_204437_Edit_Composited_Photo.JPG",
+      "assets/images/anh ca nhan/DJI_20260807_204453_Edit_Composited_Photo.JPG",
+      "assets/images/anh ca nhan/DJI_20260807_204502_Edit_Composited_Photo.JPG",
+      "assets/images/anh ca nhan/DJI_20260807_204511_Edit_Composited_Photo.JPG",
+      "assets/images/anh ca nhan/DJI_20260807_204518_Edit_Composited_Photo.JPG",
+      "assets/images/anh ca nhan/DJI_20260807_204528_Edit_Composited_Photo.JPG",
+      "assets/images/anh ca nhan/DJI_20260807_204536_Edit_Composited_Photo.JPG",
+      "assets/images/anh ca nhan/DJI_20260807_204542_Edit_Composited_Photo.JPG",
+      "assets/images/anh ca nhan/DJI_20260807_204549_Edit_Composited_Photo.JPG",
+      "assets/images/anh ca nhan/DJI_20260807_204555_Edit_Composited_Photo.JPG",
+      "assets/images/anh ca nhan/DJI_20260807_204601_Edit_Composited_Photo.JPG",
+      "assets/images/anh ca nhan/sd 2.jpg"
+    ]
+  },
+  {
+    "folderName": "Công đoàn Y tế VN",
+    "displayName": "CôNg ĐoàN Y Tế Vn",
+    "category": "others",
+    "images": [
+      "assets/images/Công đoàn Y tế VN/GT-PB-23.JPG",
+      "assets/images/Công đoàn Y tế VN/GT-PB-46.JPG",
+      "assets/images/Công đoàn Y tế VN/GT-PB-47.JPG",
+      "assets/images/Công đoàn Y tế VN/GT-PB-68.JPG",
+      "assets/images/Công đoàn Y tế VN/GT-PB-86.JPG",
+      "assets/images/Công đoàn Y tế VN/TM18-68.JPG",
+      "assets/images/Công đoàn Y tế VN/TM21-82.JPG",
+      "assets/images/Công đoàn Y tế VN/TM30-25.JPG",
+      "assets/images/Công đoàn Y tế VN/TM32-159.JPG",
+      "assets/images/Công đoàn Y tế VN/TM4-10.JPG",
+      "assets/images/Công đoàn Y tế VN/TM4-48.JPG"
+    ]
+  },
+  {
     "folderName": "JCI_HANOI",
     "displayName": "Jci Hanoi",
     "category": "others",
@@ -135,6 +172,17 @@ const IMAGES_DATA = [
     ]
   },
   {
+    "folderName": "thumbnail video",
+    "displayName": "Thumbnail Video",
+    "category": "others",
+    "images": [
+      "assets/images/thumbnail video/92908AA9-E38F-4308-8B92-AF44DB69D8C7.PNG",
+      "assets/images/thumbnail video/D43C8E92-55F0-4DA1-84AD-79A253CA8CB1.PNG",
+      "assets/images/thumbnail video/DEDB5993-A762-40B6-9B5E-B15581448B5F.PNG",
+      "assets/images/thumbnail video/FD006598-3248-4CC6-9F48-0EDE6A32A4CC.PNG"
+    ]
+  },
+  {
     "folderName": "giao_luu_van_hoa_Viet_Nhat",
     "displayName": "Giao Luu Van Hoa Viet Nhat",
     "category": "cultural",
@@ -163,6 +211,131 @@ const IMAGES_DATA = [
       "assets/images/Hoi_lang/IMG_8743.jpg",
       "assets/images/Hoi_lang/IMG_8744.jpg",
       "assets/images/Hoi_lang/anh_toan.jpeg"
+    ]
+  },
+  {
+    "folderName": "bo sung/longbien",
+    "displayName": "Longbien",
+    "category": "others",
+    "images": [
+      "assets/images/bo sung/longbien/IMG_6369.jpg",
+      "assets/images/bo sung/longbien/IMG_6370.JPG",
+      "assets/images/bo sung/longbien/IMG_7683.JPG",
+      "assets/images/bo sung/longbien/IMG_7684.JPG",
+      "assets/images/bo sung/longbien/IMG_7685.JPG",
+      "assets/images/bo sung/longbien/IMG_7686.JPG",
+      "assets/images/bo sung/longbien/IMG_7687.JPG"
+    ]
+  },
+  {
+    "folderName": "bo sung/IVF Hải phòng",
+    "displayName": "Ivf HảI PhòNg",
+    "category": "others",
+    "images": [
+      "assets/images/bo sung/IVF Hải phòng/IMG_5255.JPG",
+      "assets/images/bo sung/IVF Hải phòng/IMG_5256.JPG",
+      "assets/images/bo sung/IVF Hải phòng/IMG_5257.JPG",
+      "assets/images/bo sung/IVF Hải phòng/IMG_5258.JPG"
+    ]
+  },
+  {
+    "folderName": "bo sung/ibsa",
+    "displayName": "Ibsa",
+    "category": "others",
+    "images": [
+      "assets/images/bo sung/ibsa/HIEU4005.JPEG",
+      "assets/images/bo sung/ibsa/HIEU4042.JPEG",
+      "assets/images/bo sung/ibsa/HIEU4130.JPEG",
+      "assets/images/bo sung/ibsa/HIEU4151.JPEG",
+      "assets/images/bo sung/ibsa/NAM02335.JPEG",
+      "assets/images/bo sung/ibsa/NAM03963.JPEG"
+    ]
+  },
+  {
+    "folderName": "bo sung/eurowindown",
+    "displayName": "Eurowindown",
+    "category": "others",
+    "images": [
+      "assets/images/bo sung/eurowindown/IMG_7963.JPG",
+      "assets/images/bo sung/eurowindown/IMG_7964.JPG",
+      "assets/images/bo sung/eurowindown/IMG_7965.JPG",
+      "assets/images/bo sung/eurowindown/IMG_7967.JPG",
+      "assets/images/bo sung/eurowindown/IMG_7968.JPG"
+    ]
+  },
+  {
+    "folderName": "bo sung/Felia suits",
+    "displayName": "Felia Suits",
+    "category": "others",
+    "images": [
+      "assets/images/bo sung/Felia suits/1R9A0668.JPEG",
+      "assets/images/bo sung/Felia suits/1R9A0671.JPEG",
+      "assets/images/bo sung/Felia suits/1R9A0695.JPG",
+      "assets/images/bo sung/Felia suits/1R9A0697.JPG",
+      "assets/images/bo sung/Felia suits/1R9A0699 (1).JPG"
+    ]
+  },
+  {
+    "folderName": "bo sung/bộ văn hoá",
+    "displayName": "Bộ VăN Hoá",
+    "category": "others",
+    "images": [
+      "assets/images/bo sung/bộ văn hoá/538201566_1314115653492206_7526010035660228584_n.jpg",
+      "assets/images/bo sung/bộ văn hoá/IMG_3882.JPG",
+      "assets/images/bo sung/bộ văn hoá/IMG_3883.JPG",
+      "assets/images/bo sung/bộ văn hoá/IMG_3884.JPG",
+      "assets/images/bo sung/bộ văn hoá/IMG_3892.JPG",
+      "assets/images/bo sung/bộ văn hoá/IMG_3897.JPG",
+      "assets/images/bo sung/bộ văn hoá/IMG_3898.JPG",
+      "assets/images/bo sung/bộ văn hoá/IMG_3902.jpg",
+      "assets/images/bo sung/bộ văn hoá/IMG_3982.JPG",
+      "assets/images/bo sung/bộ văn hoá/IMG_4265.JPG",
+      "assets/images/bo sung/bộ văn hoá/IMG_4425.JPG",
+      "assets/images/bo sung/bộ văn hoá/IMG_4426.JPG",
+      "assets/images/bo sung/bộ văn hoá/IMG_4428.JPG",
+      "assets/images/bo sung/bộ văn hoá/IMG_4429.JPG",
+      "assets/images/bo sung/bộ văn hoá/IMG_4430.JPG",
+      "assets/images/bo sung/bộ văn hoá/IMG_4431.JPG",
+      "assets/images/bo sung/bộ văn hoá/IMG_4432.JPG",
+      "assets/images/bo sung/bộ văn hoá/NAM_8556.jpg",
+      "assets/images/bo sung/bộ văn hoá/NAM_8557.jpg",
+      "assets/images/bo sung/bộ văn hoá/NAM_8587.JPG",
+      "assets/images/bo sung/bộ văn hoá/NAM_8590.JPG",
+      "assets/images/bo sung/bộ văn hoá/NAM_8601.JPG"
+    ]
+  },
+  {
+    "folderName": "bo sung/pnj",
+    "displayName": "Pnj",
+    "category": "others",
+    "images": [
+      "assets/images/bo sung/pnj/TLV01591 (1).JPG",
+      "assets/images/bo sung/pnj/TLV01643.JPG",
+      "assets/images/bo sung/pnj/TLV01650.JPG",
+      "assets/images/bo sung/pnj/TLV09683.jpg",
+      "assets/images/bo sung/pnj/TLV09684.JPEG",
+      "assets/images/bo sung/pnj/TLV09689.JPEG",
+      "assets/images/bo sung/pnj/TLV09690.JPEG"
+    ]
+  },
+  {
+    "folderName": "Vilasta Thuỷ Nguyên ",
+    "displayName": "Vilasta Thuỷ NguyêN",
+    "category": "others",
+    "images": [
+      "assets/images/Vilasta Thuỷ Nguyên /IMG_4438.JPG",
+      "assets/images/Vilasta Thuỷ Nguyên /IMG_4439.JPG",
+      "assets/images/Vilasta Thuỷ Nguyên /IMG_4440.JPG",
+      "assets/images/Vilasta Thuỷ Nguyên /IMG_4441.JPG",
+      "assets/images/Vilasta Thuỷ Nguyên /IMG_4442.JPG",
+      "assets/images/Vilasta Thuỷ Nguyên /IMG_4443.JPG",
+      "assets/images/Vilasta Thuỷ Nguyên /IMG_4444.JPG",
+      "assets/images/Vilasta Thuỷ Nguyên /IMG_4569.JPG",
+      "assets/images/Vilasta Thuỷ Nguyên /IMG_4570.jpg",
+      "assets/images/Vilasta Thuỷ Nguyên /IMG_4571.JPG",
+      "assets/images/Vilasta Thuỷ Nguyên /IMG_4572.JPG",
+      "assets/images/Vilasta Thuỷ Nguyên /IMG_8062.jpg",
+      "assets/images/Vilasta Thuỷ Nguyên /IMG_8475.jpg"
     ]
   },
   {
@@ -230,6 +403,20 @@ const IMAGES_DATA = [
     ]
   },
   {
+    "folderName": "DAI HOI KHHGD",
+    "displayName": "Dai Hoi Khhgd",
+    "category": "others",
+    "images": [
+      "assets/images/DAI HOI KHHGD/DRX00500.JPEG",
+      "assets/images/DAI HOI KHHGD/DRX00519 2.JPEG",
+      "assets/images/DAI HOI KHHGD/DRX00619.JPEG",
+      "assets/images/DAI HOI KHHGD/DRX00650.JPEG",
+      "assets/images/DAI HOI KHHGD/DRX01308.JPG",
+      "assets/images/DAI HOI KHHGD/DRX01698.JPEG",
+      "assets/images/DAI HOI KHHGD/DRX01701.JPEG"
+    ]
+  },
+  {
     "folderName": "VUG",
     "displayName": "Vug",
     "category": "others",
@@ -289,6 +476,52 @@ const IMAGES_DATA = [
       "assets/images/dao_tao_BHS/Ban_sao_IMG_1305.jpg",
       "assets/images/dao_tao_BHS/Ban_sao_IMG_1324.jpg",
       "assets/images/dao_tao_BHS/Ban_sao_IMG_1325.jpg"
+    ]
+  },
+  {
+    "folderName": "TOSKANI PRIVATE DINNER",
+    "displayName": "Toskani Private Dinner",
+    "category": "others",
+    "images": [
+      "assets/images/TOSKANI PRIVATE DINNER/16zLK4dpaNsJnIoSeRLHoac3U3yRL2Za-.JPEG",
+      "assets/images/TOSKANI PRIVATE DINNER/AWV04947.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/AWV04951.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/AWV04952.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/AWV04960.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/AWV04961.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/AWV04990.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/D1720077.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/D1720082.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/D1720111.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/D1720123.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/D1730192.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/D1730204.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/D1730209.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/D1730219.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/D1730706.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/D1730719.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/D1730722.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/D1730733.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/D1730767.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/D1730784.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/D1730814.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/D1730883.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/DJI_20260807_193134_Edit_Composited_Photo.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/DJI_20260807_193317_Edit_Composited_Photo.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/DJI_20260807_193338_Edit_Composited_Photo.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/DJI_20260807_193408_Edit_Composited_Photo.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/DJI_20260807_193446_Edit_Composited_Photo.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/DJI_20260807_193456_Edit_Composited_Photo.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/DJI_20260807_193523_Edit_Composited_Photo.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/DJI_20260807_193551_Edit_Composited_Photo.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/DJI_20260807_193606_Edit_Composited_Photo.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/DJI_20260807_193623_Edit_Composited_Photo.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/DJI_20260807_193637_Edit_Composited_Photo.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/DJI_20260807_193701_Edit_Composited_Photo.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/DJI_20260807_193720_Edit_Composited_Photo.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/DJI_20260807_193736_Edit_Composited_Photo.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/DTP09751.JPG",
+      "assets/images/TOSKANI PRIVATE DINNER/DTP09775.JPG"
     ]
   },
   {
