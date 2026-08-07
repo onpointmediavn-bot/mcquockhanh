@@ -33,15 +33,6 @@ const IMAGES_DATA = [
     ]
   },
   {
-    "folderName": " 𝐒𝐢𝐦𝐨𝐧𝐚 𝐇𝐞𝐢𝐠𝐡𝐭𝐬",
-    "displayName": "𝐒𝐢𝐦𝐨𝐧𝐚 𝐇𝐞𝐢𝐠𝐡𝐭𝐬",
-    "category": "others",
-    "images": [
-      "assets/images/ 𝐒𝐢𝐦𝐨𝐧𝐚 𝐇𝐞𝐢𝐠𝐡𝐭𝐬/494049066_1225201112383661_3632762217730638423_n.jpg",
-      "assets/images/ 𝐒𝐢𝐦𝐨𝐧𝐚 𝐇𝐞𝐢𝐠𝐡𝐭𝐬/494264790_1225201099050329_7930934990531146167_n.jpg"
-    ]
-  },
-  {
     "folderName": "anh ca nhan",
     "displayName": "Anh Ca Nhan",
     "category": "others",
@@ -58,24 +49,6 @@ const IMAGES_DATA = [
       "assets/images/anh ca nhan/DJI_20260807_204555_Edit_Composited_Photo.JPG",
       "assets/images/anh ca nhan/DJI_20260807_204601_Edit_Composited_Photo.JPG",
       "assets/images/anh ca nhan/sd 2.jpg"
-    ]
-  },
-  {
-    "folderName": "Công đoàn Y tế VN",
-    "displayName": "CôNg ĐoàN Y Tế Vn",
-    "category": "others",
-    "images": [
-      "assets/images/Công đoàn Y tế VN/GT-PB-23.JPG",
-      "assets/images/Công đoàn Y tế VN/GT-PB-46.JPG",
-      "assets/images/Công đoàn Y tế VN/GT-PB-47.JPG",
-      "assets/images/Công đoàn Y tế VN/GT-PB-68.JPG",
-      "assets/images/Công đoàn Y tế VN/GT-PB-86.JPG",
-      "assets/images/Công đoàn Y tế VN/TM18-68.JPG",
-      "assets/images/Công đoàn Y tế VN/TM21-82.JPG",
-      "assets/images/Công đoàn Y tế VN/TM30-25.JPG",
-      "assets/images/Công đoàn Y tế VN/TM32-159.JPG",
-      "assets/images/Công đoàn Y tế VN/TM4-10.JPG",
-      "assets/images/Công đoàn Y tế VN/TM4-48.JPG"
     ]
   },
   {
@@ -199,6 +172,24 @@ const IMAGES_DATA = [
     ]
   },
   {
+    "folderName": "cong_doan_y_te",
+    "displayName": "Cong Doan Y Te",
+    "category": "others",
+    "images": [
+      "assets/images/cong_doan_y_te/GT-PB-23.JPG",
+      "assets/images/cong_doan_y_te/GT-PB-46.JPG",
+      "assets/images/cong_doan_y_te/GT-PB-47.JPG",
+      "assets/images/cong_doan_y_te/GT-PB-68.JPG",
+      "assets/images/cong_doan_y_te/GT-PB-86.JPG",
+      "assets/images/cong_doan_y_te/TM18-68.JPG",
+      "assets/images/cong_doan_y_te/TM21-82.JPG",
+      "assets/images/cong_doan_y_te/TM30-25.JPG",
+      "assets/images/cong_doan_y_te/TM32-159.JPG",
+      "assets/images/cong_doan_y_te/TM4-10.JPG",
+      "assets/images/cong_doan_y_te/TM4-48.JPG"
+    ]
+  },
+  {
     "folderName": "Hoi_lang",
     "displayName": "Hoi Lang",
     "category": "others",
@@ -211,6 +202,35 @@ const IMAGES_DATA = [
       "assets/images/Hoi_lang/IMG_8743.jpg",
       "assets/images/Hoi_lang/IMG_8744.jpg",
       "assets/images/Hoi_lang/anh_toan.jpeg"
+    ]
+  },
+  {
+    "folderName": "bo sung/bo_van_hoa",
+    "displayName": "Bo Van Hoa",
+    "category": "others",
+    "images": [
+      "assets/images/bo sung/bo_van_hoa/538201566_1314115653492206_7526010035660228584_n.jpg",
+      "assets/images/bo sung/bo_van_hoa/IMG_3882.JPG",
+      "assets/images/bo sung/bo_van_hoa/IMG_3883.JPG",
+      "assets/images/bo sung/bo_van_hoa/IMG_3884.JPG",
+      "assets/images/bo sung/bo_van_hoa/IMG_3892.JPG",
+      "assets/images/bo sung/bo_van_hoa/IMG_3897.JPG",
+      "assets/images/bo sung/bo_van_hoa/IMG_3898.JPG",
+      "assets/images/bo sung/bo_van_hoa/IMG_3902.jpg",
+      "assets/images/bo sung/bo_van_hoa/IMG_3982.JPG",
+      "assets/images/bo sung/bo_van_hoa/IMG_4265.JPG",
+      "assets/images/bo sung/bo_van_hoa/IMG_4425.JPG",
+      "assets/images/bo sung/bo_van_hoa/IMG_4426.JPG",
+      "assets/images/bo sung/bo_van_hoa/IMG_4428.JPG",
+      "assets/images/bo sung/bo_van_hoa/IMG_4429.JPG",
+      "assets/images/bo sung/bo_van_hoa/IMG_4430.JPG",
+      "assets/images/bo sung/bo_van_hoa/IMG_4431.JPG",
+      "assets/images/bo sung/bo_van_hoa/IMG_4432.JPG",
+      "assets/images/bo sung/bo_van_hoa/NAM_8556.jpg",
+      "assets/images/bo sung/bo_van_hoa/NAM_8557.jpg",
+      "assets/images/bo sung/bo_van_hoa/NAM_8587.JPG",
+      "assets/images/bo sung/bo_van_hoa/NAM_8590.JPG",
+      "assets/images/bo sung/bo_van_hoa/NAM_8601.JPG"
     ]
   },
   {
@@ -228,14 +248,15 @@ const IMAGES_DATA = [
     ]
   },
   {
-    "folderName": "bo sung/IVF Hải phòng",
-    "displayName": "Ivf HảI PhòNg",
+    "folderName": "bo sung/felia_suites",
+    "displayName": "Felia Suites",
     "category": "others",
     "images": [
-      "assets/images/bo sung/IVF Hải phòng/IMG_5255.JPG",
-      "assets/images/bo sung/IVF Hải phòng/IMG_5256.JPG",
-      "assets/images/bo sung/IVF Hải phòng/IMG_5257.JPG",
-      "assets/images/bo sung/IVF Hải phòng/IMG_5258.JPG"
+      "assets/images/bo sung/felia_suites/1R9A0668.JPEG",
+      "assets/images/bo sung/felia_suites/1R9A0671.JPEG",
+      "assets/images/bo sung/felia_suites/1R9A0695.JPG",
+      "assets/images/bo sung/felia_suites/1R9A0697.JPG",
+      "assets/images/bo sung/felia_suites/1R9A0699 (1).JPG"
     ]
   },
   {
@@ -252,56 +273,26 @@ const IMAGES_DATA = [
     ]
   },
   {
-    "folderName": "bo sung/eurowindown",
-    "displayName": "Eurowindown",
+    "folderName": "bo sung/ivf_hai_phong",
+    "displayName": "Ivf Hai Phong",
     "category": "others",
     "images": [
-      "assets/images/bo sung/eurowindown/IMG_7963.JPG",
-      "assets/images/bo sung/eurowindown/IMG_7964.JPG",
-      "assets/images/bo sung/eurowindown/IMG_7965.JPG",
-      "assets/images/bo sung/eurowindown/IMG_7967.JPG",
-      "assets/images/bo sung/eurowindown/IMG_7968.JPG"
+      "assets/images/bo sung/ivf_hai_phong/IMG_5255.JPG",
+      "assets/images/bo sung/ivf_hai_phong/IMG_5256.JPG",
+      "assets/images/bo sung/ivf_hai_phong/IMG_5257.JPG",
+      "assets/images/bo sung/ivf_hai_phong/IMG_5258.JPG"
     ]
   },
   {
-    "folderName": "bo sung/Felia suits",
-    "displayName": "Felia Suits",
+    "folderName": "bo sung/eurowindow",
+    "displayName": "Eurowindow",
     "category": "others",
     "images": [
-      "assets/images/bo sung/Felia suits/1R9A0668.JPEG",
-      "assets/images/bo sung/Felia suits/1R9A0671.JPEG",
-      "assets/images/bo sung/Felia suits/1R9A0695.JPG",
-      "assets/images/bo sung/Felia suits/1R9A0697.JPG",
-      "assets/images/bo sung/Felia suits/1R9A0699 (1).JPG"
-    ]
-  },
-  {
-    "folderName": "bo sung/bộ văn hoá",
-    "displayName": "Bộ VăN Hoá",
-    "category": "others",
-    "images": [
-      "assets/images/bo sung/bộ văn hoá/538201566_1314115653492206_7526010035660228584_n.jpg",
-      "assets/images/bo sung/bộ văn hoá/IMG_3882.JPG",
-      "assets/images/bo sung/bộ văn hoá/IMG_3883.JPG",
-      "assets/images/bo sung/bộ văn hoá/IMG_3884.JPG",
-      "assets/images/bo sung/bộ văn hoá/IMG_3892.JPG",
-      "assets/images/bo sung/bộ văn hoá/IMG_3897.JPG",
-      "assets/images/bo sung/bộ văn hoá/IMG_3898.JPG",
-      "assets/images/bo sung/bộ văn hoá/IMG_3902.jpg",
-      "assets/images/bo sung/bộ văn hoá/IMG_3982.JPG",
-      "assets/images/bo sung/bộ văn hoá/IMG_4265.JPG",
-      "assets/images/bo sung/bộ văn hoá/IMG_4425.JPG",
-      "assets/images/bo sung/bộ văn hoá/IMG_4426.JPG",
-      "assets/images/bo sung/bộ văn hoá/IMG_4428.JPG",
-      "assets/images/bo sung/bộ văn hoá/IMG_4429.JPG",
-      "assets/images/bo sung/bộ văn hoá/IMG_4430.JPG",
-      "assets/images/bo sung/bộ văn hoá/IMG_4431.JPG",
-      "assets/images/bo sung/bộ văn hoá/IMG_4432.JPG",
-      "assets/images/bo sung/bộ văn hoá/NAM_8556.jpg",
-      "assets/images/bo sung/bộ văn hoá/NAM_8557.jpg",
-      "assets/images/bo sung/bộ văn hoá/NAM_8587.JPG",
-      "assets/images/bo sung/bộ văn hoá/NAM_8590.JPG",
-      "assets/images/bo sung/bộ văn hoá/NAM_8601.JPG"
+      "assets/images/bo sung/eurowindow/IMG_7963.JPG",
+      "assets/images/bo sung/eurowindow/IMG_7964.JPG",
+      "assets/images/bo sung/eurowindow/IMG_7965.JPG",
+      "assets/images/bo sung/eurowindow/IMG_7967.JPG",
+      "assets/images/bo sung/eurowindow/IMG_7968.JPG"
     ]
   },
   {
@@ -363,6 +354,15 @@ const IMAGES_DATA = [
     ]
   },
   {
+    "folderName": "simona_heights",
+    "displayName": "Simona Heights",
+    "category": "others",
+    "images": [
+      "assets/images/simona_heights/494049066_1225201112383661_3632762217730638423_n.jpg",
+      "assets/images/simona_heights/494264790_1225201099050329_7930934990531146167_n.jpg"
+    ]
+  },
+  {
     "folderName": "Anh_Sun_Festo_Town",
     "displayName": "Anh Sun Festo Town",
     "category": "others",
@@ -400,20 +400,6 @@ const IMAGES_DATA = [
       "assets/images/mc_truyen_hinh/IMG_4782.jpg",
       "assets/images/mc_truyen_hinh/IMG_6242.jpg",
       "assets/images/mc_truyen_hinh/IMG_8429.jpg"
-    ]
-  },
-  {
-    "folderName": "DAI HOI KHHGD",
-    "displayName": "Dai Hoi Khhgd",
-    "category": "others",
-    "images": [
-      "assets/images/DAI HOI KHHGD/DRX00500.JPEG",
-      "assets/images/DAI HOI KHHGD/DRX00519 2.JPEG",
-      "assets/images/DAI HOI KHHGD/DRX00619.JPEG",
-      "assets/images/DAI HOI KHHGD/DRX00650.JPEG",
-      "assets/images/DAI HOI KHHGD/DRX01308.JPG",
-      "assets/images/DAI HOI KHHGD/DRX01698.JPEG",
-      "assets/images/DAI HOI KHHGD/DRX01701.JPEG"
     ]
   },
   {
@@ -476,6 +462,20 @@ const IMAGES_DATA = [
       "assets/images/dao_tao_BHS/Ban_sao_IMG_1305.jpg",
       "assets/images/dao_tao_BHS/Ban_sao_IMG_1324.jpg",
       "assets/images/dao_tao_BHS/Ban_sao_IMG_1325.jpg"
+    ]
+  },
+  {
+    "folderName": "dai_hoi_khhgd",
+    "displayName": "Dai Hoi Khhgd",
+    "category": "others",
+    "images": [
+      "assets/images/dai_hoi_khhgd/DRX00500.JPEG",
+      "assets/images/dai_hoi_khhgd/DRX00519 2.JPEG",
+      "assets/images/dai_hoi_khhgd/DRX00619.JPEG",
+      "assets/images/dai_hoi_khhgd/DRX00650.JPEG",
+      "assets/images/dai_hoi_khhgd/DRX01308.JPG",
+      "assets/images/dai_hoi_khhgd/DRX01698.JPEG",
+      "assets/images/dai_hoi_khhgd/DRX01701.JPEG"
     ]
   },
   {

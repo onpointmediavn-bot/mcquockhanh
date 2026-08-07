@@ -127,8 +127,8 @@
   function initRealEstateGallery() {
     if (!realEstateGrid || typeof IMAGES_DATA === 'undefined') return;
     
-    // Display 'ecogarden', 'bo sung/Felia suits', 'dao_tao_BHS', ' 𝐒𝐢𝐦𝐨𝐧𝐚 𝐇𝐞𝐢𝐠𝐡𝐭s', 'alluvia', 'kickoff_phu_gia' in the specified order (newest first)
-    const realEstateFolders = ['alluvia', 'kickoff_phu_gia', 'ecogarden', 'bo sung/Felia suits', 'dao_tao_BHS', ' 𝐒𝐢𝐦𝐨𝐧𝐚 𝐇𝐞𝐢𝐠𝐡𝐭𝐬'];
+    // Display 'ecogarden', 'bo sung/felia_suites', 'dao_tao_BHS', 'simona_heights', 'alluvia', 'kickoff_phu_gia' in the specified order (newest first)
+    const realEstateFolders = ['alluvia', 'kickoff_phu_gia', 'ecogarden', 'bo sung/felia_suites', 'dao_tao_BHS', 'simona_heights'];
     
     const realEstateAlbums = IMAGES_DATA.filter(album => realEstateFolders.includes(album.folderName));
     
@@ -149,7 +149,7 @@
       if (album.folderName === 'ecogarden') {
         displayName = 'Sự Kiện KickOff Dự Án Eco Garden Bắc Ninh';
         tagline = '“Tinh hoa hội tụ - Khai mở sống xanh”';
-      } else if (album.folderName === 'bo sung/Felia suits') {
+      } else if (album.folderName === 'bo sung/felia_suites') {
         displayName = 'Sự Kiện Giới Thiệu Dự Án Sun Feliza Suites';
         tagline = '“Tuyệt tác không gian sống thượng lưu”';
         
@@ -167,7 +167,7 @@
         if (customThumb) {
           previewImg = customThumb;
         }
-      } else if (album.folderName === ' 𝐒𝐢𝐦𝐨𝐧𝐚 𝐇𝐞𝐢𝐠𝐡𝐭𝐬') {
+      } else if (album.folderName === 'simona_heights') {
         displayName = 'Sự Kiện “Hòa Ca Phố Biển” | Giới Thiệu Dự Án Simona Heights';
         tagline = '“Hòa ca phố biển - Kiệt tác thượng lưu Quy Nhơn”';
         customBgPosition = 'background-position: left center;';
