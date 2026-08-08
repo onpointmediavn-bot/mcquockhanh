@@ -310,26 +310,6 @@ const IMAGES_DATA = [
     ]
   },
   {
-    "folderName": "Vilasta Thuỷ Nguyên ",
-    "displayName": "Vilasta Thuỷ NguyêN",
-    "category": "others",
-    "images": [
-      "assets/images/Vilasta Thuỷ Nguyên /IMG_4438.JPG",
-      "assets/images/Vilasta Thuỷ Nguyên /IMG_4439.JPG",
-      "assets/images/Vilasta Thuỷ Nguyên /IMG_4440.JPG",
-      "assets/images/Vilasta Thuỷ Nguyên /IMG_4441.JPG",
-      "assets/images/Vilasta Thuỷ Nguyên /IMG_4442.JPG",
-      "assets/images/Vilasta Thuỷ Nguyên /IMG_4443.JPG",
-      "assets/images/Vilasta Thuỷ Nguyên /IMG_4444.JPG",
-      "assets/images/Vilasta Thuỷ Nguyên /IMG_4569.JPG",
-      "assets/images/Vilasta Thuỷ Nguyên /IMG_4570.jpg",
-      "assets/images/Vilasta Thuỷ Nguyên /IMG_4571.JPG",
-      "assets/images/Vilasta Thuỷ Nguyên /IMG_4572.JPG",
-      "assets/images/Vilasta Thuỷ Nguyên /IMG_8062.jpg",
-      "assets/images/Vilasta Thuỷ Nguyên /IMG_8475.jpg"
-    ]
-  },
-  {
     "folderName": "Press Cup 2025",
     "displayName": "Press Cup 2025",
     "category": "others",
@@ -382,6 +362,26 @@ const IMAGES_DATA = [
     "category": "others",
     "images": [
       "assets/images/anh_heiwa_peace_Tay_Ho_2023/MEOW1461.jpg"
+    ]
+  },
+  {
+    "folderName": "vilasta_thuy_nguyen",
+    "displayName": "Vilasta Thuy Nguyen",
+    "category": "others",
+    "images": [
+      "assets/images/vilasta_thuy_nguyen/IMG_4438.JPG",
+      "assets/images/vilasta_thuy_nguyen/IMG_4439.JPG",
+      "assets/images/vilasta_thuy_nguyen/IMG_4440.JPG",
+      "assets/images/vilasta_thuy_nguyen/IMG_4441.JPG",
+      "assets/images/vilasta_thuy_nguyen/IMG_4442.JPG",
+      "assets/images/vilasta_thuy_nguyen/IMG_4443.JPG",
+      "assets/images/vilasta_thuy_nguyen/IMG_4444.JPG",
+      "assets/images/vilasta_thuy_nguyen/IMG_4569.JPG",
+      "assets/images/vilasta_thuy_nguyen/IMG_4570.jpg",
+      "assets/images/vilasta_thuy_nguyen/IMG_4571.JPG",
+      "assets/images/vilasta_thuy_nguyen/IMG_4572.JPG",
+      "assets/images/vilasta_thuy_nguyen/IMG_8062.jpg",
+      "assets/images/vilasta_thuy_nguyen/IMG_8475.jpg"
     ]
   },
   {
