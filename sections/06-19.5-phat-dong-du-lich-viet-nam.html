@@ -2,7 +2,7 @@
      SECTION 24 — PHÁT ĐỘNG CUỘC THI ẤN TƯỢNG DU LỊCH VIỆT NAM
      ========================================== -->
 <section class="poster-container bg-navy" id="poster-tourism-video">
-  <div class="poster-bg opacity-20" style="background-image: url('assets/images/bo sung/bộ văn hoá/IMG_3982.JPG');"></div>
+  <div class="poster-bg opacity-20" style="background-image: url('assets/images/bo sung/bo_van_hoa/IMG_3982.JPG');"></div>
   <div class="poster-overlay-gradient"></div>
 
   <div class="poster-content text-center">
@@ -22,23 +22,23 @@
         <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
           <!-- Big Showcase Image (Left, spans 8/12) -->
           <div class="md:col-span-8 relative aspect-[16/10] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-lg cursor-pointer" onclick="openTourismVideoLightbox('IMG_3982.JPG')">
-            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/bo sung/bộ văn hoá/IMG_3982.JPG');"></div>
+            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/bo sung/bo_van_hoa/IMG_3982.JPG');"></div>
           </div>
           
           <!-- Stack of Two Right Images (Right, spans 4/12) -->
           <div class="md:col-span-4 flex flex-col justify-between gap-4">
             <div class="relative flex-1 aspect-[16/10] md:aspect-auto overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openTourismVideoLightbox('IMG_4265.JPG')">
-              <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/bo sung/bộ văn hoá/IMG_4265.JPG');"></div>
+              <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/bo sung/bo_van_hoa/IMG_4265.JPG');"></div>
             </div>
             <div class="relative flex-1 aspect-[16/10] md:aspect-auto overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openTourismVideoLightbox('IMG_4432.JPG')">
-              <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/bo sung/bộ văn hoá/IMG_4432.JPG');"></div>
+              <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/bo sung/bo_van_hoa/IMG_4432.JPG');"></div>
             </div>
           </div>
         </div>
 
         <!-- Bottom Row: 1 Widescreen cinematic image (1 image) -->
         <div class="relative aspect-[21/9] overflow-hidden rounded border border-gray-800/80 group transition-all duration-300 shadow-md cursor-pointer" onclick="openTourismVideoLightbox('538201566_1314115653492206_7526010035660228584_n.jpg')">
-          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/bo sung/bộ văn hoá/538201566_1314115653492206_7526010035660228584_n.jpg');"></div>
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('assets/images/bo sung/bo_van_hoa/538201566_1314115653492206_7526010035660228584_n.jpg');"></div>
         </div>
       </div>
 
@@ -54,7 +54,7 @@
 <script>
   function openTourismVideoLightbox(imgName) {
     if (typeof openLightbox === 'function' && typeof IMAGES_DATA !== 'undefined') {
-      const albumIdx = IMAGES_DATA.findIndex(a => a.folderName === 'bo sung/bộ văn hoá');
+      const albumIdx = IMAGES_DATA.findIndex(a => a.folderName === 'bo sung/bo_van_hoa');
       if (albumIdx !== -1) {
         const imagesList = getSectionImages('poster-tourism-video');
         const imgIdx = imagesList.findIndex(img => img.includes(imgName));
