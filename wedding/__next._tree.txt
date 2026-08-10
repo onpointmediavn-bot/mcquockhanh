@@ -1,8 +1,8 @@
-:HL["/wedding/_next/static/chunks/f74662c3bee6d40b.css","style"]
+:HL["/wedding/_next/static/chunks/d0a87debca09d86d.css","style"]
 :HL["/wedding/_next/static/media/14e23f9b59180572-s.p.9c448f3c.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/wedding/_next/static/media/2a65768255d6b625-s.p.d19752fb.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/wedding/_next/static/media/2bbe8d2671613f1f-s.p.76dcb0b2.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/wedding/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/wedding/_next/static/media/fee55ea9d1ffe445-s.p.233bf156.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap","style"]
-0:{"buildId":"wr9HCXTAqz7sS3QjlpQQ1","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"Q0awiEs3KNafcTheKtsH1","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
