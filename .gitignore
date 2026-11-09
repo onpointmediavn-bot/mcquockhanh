@@ -1,1 +1,6 @@
 .DS_Store
+*.raw
+*.zip
+*.psd
+.wrangler/
+.wrangler
