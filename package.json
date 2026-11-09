@@ -6,8 +6,7 @@
   "scripts": {
     "build": "node build.js",
     "watch": "node build.js --watch",
-    "server": "python3 -m http.server 8000",
-    "deploy": "npx wrangler pages deploy . --project-name mcquockhanh --branch main --commit-dirty=true"
+    "server": "python3 -m http.server 8000"
   },
   "keywords": [],
   "author": "",
